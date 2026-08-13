@@ -34,6 +34,9 @@ export class PortfolioSliderComponent {
   // so switching languages never affects the active filter's identity.
   activeCategory = signal<string | null>(null);
 
+  // `null` = "All genders" — same stable-sentinel pattern as activeCategory.
+  activeGender = signal<'ذكوري' | 'أنثوي' | null>(null);
+
   prevIcon = computed(() => this.languageService.activeLanguage().direction === 'rtl' ? 'chevron-right' : 'chevron-left');
   nextIcon = computed(() => this.languageService.activeLanguage().direction === 'rtl' ? 'chevron-left' : 'chevron-right');
   viewAllIcon = computed(() => this.languageService.activeLanguage().direction === 'rtl' ? 'arrow-left' : 'arrow-right');
@@ -46,6 +49,7 @@ export class PortfolioSliderComponent {
   filteredInvitations = computed(() => {
     let items = this.invitations();
     const cat = this.activeCategory();
+    const gender = this.activeGender();
 
     if (cat !== null) {
       const searchCat = cat.trim();
@@ -53,6 +57,10 @@ export class PortfolioSliderComponent {
         (i.category && i.category.trim() === searchCat) ||
         (i.allCategories && i.allCategories.some(c => c.trim() === searchCat))
       );
+    }
+
+    if (gender !== null) {
+      items = items.filter(i => i.gender === gender);
     }
 
     if (typeof window !== 'undefined') {
@@ -69,6 +77,10 @@ export class PortfolioSliderComponent {
 
   setCategory(cat: string | null) {
     this.activeCategory.set(cat);
+  }
+
+  setGender(gender: 'ذكوري' | 'أنثوي' | null) {
+    this.activeGender.set(gender);
   }
 
   openPreview(card: InvitationCard) {

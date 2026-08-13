@@ -6,6 +6,7 @@
   "navbar": {
     "home": "Home",
     "designs": "Designs",
+    "solutions": "Solutions",
     "additionalServices": "Our Features",
     "howItWorks": "How It Works",
     "demo": "Try It Free",
@@ -16,7 +17,15 @@
     "blog": "Blog",
     "menuTooltip": "Menu",
     "email": "Email",
-    "cta": "Order Now"
+    "cta": "Order Now",
+    "categories": {
+      "c0": "Weddings",
+      "c1": "Graduations",
+      "c2": "Corporate Events",
+      "c3": "Government Events",
+      "c4": "University Events",
+      "c5": "General Events"
+    }
   },
   "footer": {
     "quickLinksTitle": "Quick Links",
@@ -46,8 +55,8 @@
   "hero": {
     "kicker": "RIYADH • SAUDI ARABIA",
     "heading": "<span>Digital invitation</span> cards for every occasion",
-    "title": "Let Special.. Speak For Your Occasion",
-    "subtitle": "Your invitation is a unique design, and your guests can follow easily — Special Cards brings technology and taste together in one place.",
+    "title": "How many times did you need to know who confirmed, and who still hasn't replied?",
+    "subtitle": "Your digital invitation with Special Cards isn't just an elegant design — it's a complete experience for sending invites, tracking RSVPs, and managing your guests, all from one place.",
     "cta1": "Order Your Invite",
     "cta2": "View Designs",
     "mockPlaceholder": "Drop a card design shot here",
@@ -55,6 +64,12 @@
       "events": { "value": "500+", "label": "Successful Events" },
       "countries": { "value": "3", "label": "Countries" },
       "support": { "value": "24/7", "label": "Full Support" }
+    },
+    "badges": {
+      "b0": "Scan Entry Codes",
+      "b1": "Send via WhatsApp",
+      "b2": "Automatic Reminder",
+      "b3": "Attendance Stats"
     }
   },
   "about": {
@@ -162,10 +177,9 @@
     "title": "We do the work... and you track from your mobile",
     "body": "We don't ask you to design, upload, or adjust anything — we receive your event details and handle the rest, while the app gives you live tracking.",
     "mockPlaceholder": "Drop an app screenshot here",
-    "f0": "See who confirmed and who declined moment by moment",
-    "f1": "All your event data is right in front of you anytime",
-    "f2": "Know who entered the hall the moment their barcode is scanned",
-    "f3": "A comprehensive final report after the event",
+    "f0": "High-resolution 4K quality invitation card",
+    "f1": "Encrypted, verified QR entry code for every guest",
+    "f2": "Direct link to the venue's geographic location",
     "appStore": "App Store",
     "googlePlay": "Google Play"
   },
@@ -252,7 +266,10 @@
     "orderThisDesign": "Order This Design",
     "prevAria": "Previous",
     "nextAria": "Next",
-    "categoryAll": "All Designs"
+    "categoryAll": "All Designs",
+    "genderAll": "All Designs",
+    "genderMale": "Men's Designs",
+    "genderFemale": "Women's Designs"
   },
   "additionalServices": {
     "title": "What Makes Us <span>Different?</span>",
@@ -345,6 +362,83 @@
     "ctaContactUs": "Contact Us",
     "currency": "SAR",
     "popularBadge": "MOST POPULAR"
+  },
+  "orderRequest": {
+    "kicker": "Order Now",
+    "title": "Ready to plan your event?",
+    "subtitle": "Fill in your details and reach us directly on WhatsApp",
+    "entityIndividual": "Individual",
+    "entityCompany": "Company / Organization",
+    "nameLabel": "Name (Optional)",
+    "namePlaceholder": "Enter your full name",
+    "companyNamePlaceholder": "Enter your company name",
+    "phoneLabel": "Mobile Number",
+    "phonePlaceholder": "5xxxxxxxx",
+    "countrySearchPlaceholder": "Search for a country...",
+    "noResults": "No results found",
+    "emailLabel": "Email (Optional)",
+    "emailPlaceholder": "example@email.com",
+    "guestsLabel": "Approximate Guest Count",
+    "guestsPlaceholder": "Enter approximate count",
+    "eventTypeLabel": "Event Type",
+    "eventTypePlaceholder": "Select an event type",
+    "notesLabel": "Additional Notes",
+    "notesPlaceholder": "Any additional details you'd like to share...",
+    "submitBtn": "Send via WhatsApp",
+    "messageIntro": "I'd like to request a digital invitation from Special Cards",
+    "messageEntity": "Type",
+    "messageName": "Name",
+    "messagePhone": "Mobile",
+    "messageEmail": "Email",
+    "messageGuests": "Guest Count",
+    "messageEventType": "Event Type",
+    "messageNotes": "Notes"
+  },
+  "platformFeatures": {
+    "kicker": "App Features",
+    "title": "Special Cards App Features",
+    "subtitle": "The Special Cards app gives you a complete set of features to manage your event invitations with ease and professionalism",
+    "groupInvites": {
+      "title": "Invitation Management",
+      "item0": { "title": "Send Invitations", "body": "Easily send invitations for your event." },
+      "item1": { "title": "Send a Trial Invitation", "body": "Send a trial invitation before the real send, to confirm the content and design." },
+      "item2": { "title": "Delivery via WhatsApp or SMS", "body": "Invitations are delivered via WhatsApp or text message, with delivery guaranteed." },
+      "item3": { "title": "Reminder Before the Event", "body": "An automatic reminder is sent one day before the event." },
+      "item4": { "title": "Assign an Additional Host", "body": "Ability to assign an additional host for the event." }
+    },
+    "groupAttendance": {
+      "title": "Attendance Management",
+      "item0": { "title": "Attendance Statistics", "body": "See attendance stats including names and contact numbers for both attendees and no-shows." },
+      "item1": { "title": "Personal Entry Barcode", "body": "A unique entry barcode is issued for every guest to verify attendance." },
+      "item2": { "title": "Scan Entry Codes", "body": "Scan entry codes directly from the app, with no need for special hardware." },
+      "item3": { "title": "Receive Guest Messages", "body": "Receive guest messages such as thank-you notes and well-wishes through the app." },
+      "item4": { "title": "Assign a Gate Supervisor", "body": "Assign anyone as the gate guard or hall coordinator to scan entry codes." },
+      "item5": { "title": "Compensatory Invitation Credit", "body": "Get extra credit as compensation for declines, from the total invitation count." }
+    }
+  },
+
+  "testimonialsSection": {
+    "kicker": "Client Reviews",
+    "title": "Trust we're proud of, from hundreds of families and companies",
+    "subtitle": "Real testimonials from clients who used Special Cards for their events",
+    "emptyMessage": "No reviews are available right now."
+  },
+  "faq": {
+    "kicker": "FAQ",
+    "title": "Got a question? We've got the answer",
+    "subtitle": "The most common questions we get from our clients about Special Cards",
+    "q0": { "q": "What is Special Cards?", "a": "Special Cards is a platform specialized in designing and sending distinctive digital invitations for weddings and occasions. It helps you create invitations easily, send them via WhatsApp and text messages, track attendance statistics, and send automatic reminders." },
+    "q1": { "q": "How can I create a new invitation?", "a": "You can create a new invitation through the Special Cards app. Choose the right number of invitations, add your event details, and invite your guests. The app is available on the App Store and Google Play." },
+    "q2": { "q": "Can I add my own custom design?", "a": "Of course, you can provide us with any custom design of your own." },
+    "q3": { "q": "Can I see the details of RSVPs and attendance?", "a": "Yes, you'll get an overall attendance summary along with a detailed list containing guest names and phone numbers." },
+    "q4": { "q": "Can reminders be sent to guests?", "a": "Yes, Special Cards automatically sends a reminder to all guests one day before the event. You can also send extra reminders whenever needed." },
+    "q5": { "q": "What is the compensatory credit system?", "a": "Compensatory credit means that if a guest declines, you get a free replacement invitation you can use to invite someone else." },
+    "q6": { "q": "Can I assign more than one additional host?", "a": "Yes, you can assign more than one additional host. For example, you can allocate specific invitations to the groom's family, and you'll still see comprehensive statistics across all invitations." },
+    "q7": { "q": "Are invitations sent to each guest by their personal name?", "a": "Yes, the invitation message shows each guest's name personally." },
+    "q8": { "q": "Do all invitations reach the recipients?", "a": "Yes, God willing, all invitations reach recipients whether via WhatsApp or text message." },
+    "q9": { "q": "What about guests who don't use WhatsApp?", "a": "No worries, they'll receive the invitation via text message instead of WhatsApp." },
+    "q10": { "q": "Can I invite guests from outside Saudi Arabia?", "a": "Yes, you can invite guests from anywhere in the world." },
+    "q11": { "q": "Is my data safe with Special Cards?", "a": "The security of your data is our top priority. We use the latest encryption and protection technologies to ensure the privacy of your information and your guests' data. All data is protected and never shared with any third party." }
   },
   "supervisors": {
     "kicker": "_ Gate Supervisors _",

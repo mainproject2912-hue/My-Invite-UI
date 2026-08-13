@@ -1,0 +1,30 @@
+<section id="faq" class="faq-section section-py">
+  <div class="faq-inner">
+    <div class="faq-header">
+      <span class="badge-pill">{{ 'faq.kicker' | transloco }}</span>
+      <h2 class="section-title font-display">{{ 'faq.title' | transloco }}</h2>
+      <p class="section-sub">{{ 'faq.subtitle' | transloco }}</p>
+    </div>
+
+    <div class="faq-list">
+      @for (i of indices; track i) {
+        <div class="faq-item" [class.open]="isOpen(i)">
+          <button
+            type="button"
+            class="faq-question"
+            (click)="toggle(i)"
+            [attr.aria-expanded]="isOpen(i)"
+          >
+            <span>{{ 'faq.q' + i + '.q' | transloco }}</span>
+            <lucide-icon name="chevron-down" class="faq-chevron"></lucide-icon>
+          </button>
+          @if (isOpen(i)) {
+            <div class="faq-answer">
+              <p>{{ 'faq.q' + i + '.a' | transloco }}</p>
+            </div>
+          }
+        </div>
+      }
+    </div>
+  </div>
+</section>

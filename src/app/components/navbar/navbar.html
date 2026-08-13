@@ -10,6 +10,23 @@
     <!-- Desktop nav links -->
     <nav class="nav-desktop">
       <a href="#hero" class="nav-link" (click)="smoothScroll($event, '#')">{{ 'navbar.home' | transloco }}</a>
+
+      <div class="nav-dropdown" #solutionsRef>
+        <button type="button" class="nav-link nav-dropdown-trigger" (click)="toggleSolutions()">
+          {{ 'navbar.solutions' | transloco }}
+          <lucide-icon name="chevron-down" class="w-3.5 h-3.5 nav-dropdown-chevron" [class.rotated]="isSolutionsOpen"></lucide-icon>
+        </button>
+        @if (isSolutionsOpen) {
+          <div class="nav-dropdown-panel">
+            @for (key of categoryKeys; track key) {
+              <a href="#gallery" class="nav-dropdown-item" (click)="smoothScroll($event, '#gallery')">
+                {{ 'navbar.categories.' + key | transloco }}
+              </a>
+            }
+          </div>
+        }
+      </div>
+
       <a href="#gallery" class="nav-link" (click)="smoothScroll($event, '#gallery')">{{ 'navbar.designs' | transloco }}</a>
       <a href="#packages" class="nav-link" (click)="smoothScroll($event, '#packages')">{{ 'navbar.packages' | transloco }}</a>
       <a href="#app" class="nav-link" (click)="smoothScroll($event, '#app')">{{ 'navbar.app' | transloco }}</a>
@@ -33,6 +50,21 @@
   @if (isMenuOpen) {
   <div class="mobile-menu-panel">
     <a href="#hero" class="mobile-link" (click)="smoothScroll($event, '#')">{{ 'navbar.home' | transloco }}</a>
+
+    <button type="button" class="mobile-link mobile-dropdown-trigger" (click)="toggleMobileSolutions()">
+      {{ 'navbar.solutions' | transloco }}
+      <lucide-icon name="chevron-down" class="w-4 h-4 nav-dropdown-chevron" [class.rotated]="isMobileSolutionsOpen"></lucide-icon>
+    </button>
+    @if (isMobileSolutionsOpen) {
+      <div class="mobile-dropdown-panel">
+        @for (key of categoryKeys; track key) {
+          <a href="#gallery" class="mobile-dropdown-item" (click)="smoothScroll($event, '#gallery')">
+            {{ 'navbar.categories.' + key | transloco }}
+          </a>
+        }
+      </div>
+    }
+
     <a href="#gallery" class="mobile-link" (click)="smoothScroll($event, '#gallery')">{{ 'navbar.designs' | transloco }}</a>
     <a href="#packages" class="mobile-link" (click)="smoothScroll($event, '#packages')">{{ 'navbar.packages' | transloco }}</a>
     <a href="#app" class="mobile-link" (click)="smoothScroll($event, '#app')">{{ 'navbar.app' | transloco }}</a>

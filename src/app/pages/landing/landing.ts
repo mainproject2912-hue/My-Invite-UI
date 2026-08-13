@@ -27,6 +27,10 @@ import { AdditionalServicesComponent } from './components/additional-services/ad
 import { BlogComponent } from './components/blog/blog';
 import { ContactComponent } from './components/contact/contact';
 import { OrderModalComponent } from '../../components/order-modal/order-modal.component';
+import { PlatformFeaturesComponent } from './components/platform-features/platform-features';
+import { OrderRequestComponent } from './components/order-request/order-request';
+import { TestimonialsComponent } from './components/testimonials/testimonials';
+import { FaqComponent } from './components/faq/faq';
 
 @Component({
   selector: 'app-landing',
@@ -54,7 +58,11 @@ import { OrderModalComponent } from '../../components/order-modal/order-modal.co
     AdditionalServicesComponent,
     BlogComponent,
     ContactComponent,
-    OrderModalComponent
+    OrderModalComponent,
+    PlatformFeaturesComponent,
+    OrderRequestComponent,
+    TestimonialsComponent,
+    FaqComponent
   ],
   templateUrl: './landing.html',
   styleUrl: './landing.css'

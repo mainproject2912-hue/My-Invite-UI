@@ -1,0 +1,31 @@
+<section id="platform-features" class="pf-section section-py">
+  <div class="pf-inner">
+    <div class="pf-header">
+      <span class="badge-pill">{{ 'platformFeatures.kicker' | transloco }}</span>
+      <h2 class="section-title font-display">{{ 'platformFeatures.title' | transloco }}</h2>
+      <p class="section-sub">{{ 'platformFeatures.subtitle' | transloco }}</p>
+    </div>
+
+    <h3 class="pf-group-title">{{ 'platformFeatures.groupInvites.title' | transloco }}</h3>
+    <div class="pf-grid">
+      @for (item of inviteItems; track item.key) {
+        <div class="pf-card sc-hover-card">
+          <lucide-icon [name]="item.icon" class="pf-card-icon"></lucide-icon>
+          <h4 class="pf-card-title">{{ item.key + '.title' | transloco }}</h4>
+          <p class="pf-card-body">{{ item.key + '.body' | transloco }}</p>
+        </div>
+      }
+    </div>
+
+    <h3 class="pf-group-title">{{ 'platformFeatures.groupAttendance.title' | transloco }}</h3>
+    <div class="pf-grid">
+      @for (item of attendanceItems; track item.key) {
+        <div class="pf-card sc-hover-card">
+          <lucide-icon [name]="item.icon" class="pf-card-icon"></lucide-icon>
+          <h4 class="pf-card-title">{{ item.key + '.title' | transloco }}</h4>
+          <p class="pf-card-body">{{ item.key + '.body' | transloco }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

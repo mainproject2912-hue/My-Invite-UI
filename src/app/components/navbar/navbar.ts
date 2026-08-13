@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, ElementRef, ViewChild, HostListener } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
 import { TranslocoModule } from '@jsverse/transloco';
@@ -28,6 +28,31 @@ export class NavbarComponent {
   );
 
   isMenuOpen = false;
+  isSolutionsOpen = false;
+  isMobileSolutionsOpen = false;
+
+  readonly categoryKeys = ['c0', 'c1', 'c2', 'c3', 'c4', 'c5'];
+
+  @ViewChild('solutionsRef') solutionsRef?: ElementRef;
+
+  toggleSolutions() {
+    this.isSolutionsOpen = !this.isSolutionsOpen;
+  }
+
+  closeSolutions() {
+    this.isSolutionsOpen = false;
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(e: Event) {
+    if (this.solutionsRef && !this.solutionsRef.nativeElement.contains(e.target)) {
+      this.isSolutionsOpen = false;
+    }
+  }
+
+  toggleMobileSolutions() {
+    this.isMobileSolutionsOpen = !this.isMobileSolutionsOpen;
+  }
 
   toggleLanguage(): void {
     this.isMenuOpen = false;
@@ -40,10 +65,13 @@ export class NavbarComponent {
 
   closeMenu() {
     this.isMenuOpen = false;
+    this.isMobileSolutionsOpen = false;
   }
 
   smoothScroll(event: Event, href: string) {
     this.isMenuOpen = false;
+    this.isSolutionsOpen = false;
+    this.isMobileSolutionsOpen = false;
     const id = href.replace('#', '');
     if (!id) {
       this.scrollService.goHome(event);

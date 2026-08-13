@@ -1,12 +1,13 @@
 import { Component, computed, inject } from '@angular/core';
 import { TranslocoModule } from '@jsverse/transloco';
+import { LucideAngularModule } from 'lucide-angular';
 import { ContentService } from '../../../../services/content.service';
 import { ScrollService } from '../../../../services/scroll.service';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [TranslocoModule],
+  imports: [TranslocoModule, LucideAngularModule],
   templateUrl: './hero.html',
   styleUrl: './hero.css'
 })
@@ -19,6 +20,13 @@ export class HeroComponent {
   // first real card from the library rather than a placeholder so the
   // hero still reflects actual product imagery.
   readonly mockCard = computed(() => this.carouselCards()[0] ?? null);
+
+  readonly badges = [
+    { icon: 'qr-code', key: 'hero.badges.b0' },
+    { icon: 'message-circle', key: 'hero.badges.b1' },
+    { icon: 'bell', key: 'hero.badges.b2' },
+    { icon: 'bar-chart-3', key: 'hero.badges.b3' }
+  ];
 
   // Reference tracks the cursor and re-centers the nebula glow under it
   // via a CSS transform, recomputed on every mousemove.

@@ -5,7 +5,16 @@
       "Bash(dir \"D:\\\\ui myinvite\\\\My-Invite-UI\\\\dist\\\\browser\" /s /b)",
       "Bash(ng build *)",
       "Bash(copy dist\\\\browser\\\\browser\\\\index.html dist\\\\browser\\\\browser\\\\404.html)",
-      "Bash(npx angular-cli-ghpages *)"
+      "Bash(npx angular-cli-ghpages *)",
+      "Bash(npm install *)",
+      "PowerShell(node --version)",
+      "PowerShell(npm --version)",
+      "PowerShell($paths = @\\(\"C:\\\\Program Files\\\\nodejs\\\\node.exe\",\"C:\\\\Program Files \\(x86\\)\\\\nodejs\\\\node.exe\",\"$env:APPDATA\\\\npm\\\\node.exe\",\"$env:LOCALAPPDATA\\\\Programs\\\\nodejs\\\\node.exe\"\\); foreach \\($p in $paths\\) { if \\(Test-Path $p\\) { Write-Output \"FOUND: $p\" } }; Write-Output \"---nvm---\"; if \\(Test-Path \"$env:APPDATA\\\\nvm\"\\) { Get-ChildItem \"$env:APPDATA\\\\nvm\" -ErrorAction SilentlyContinue | Select-Object -First 10 }; Write-Output \"---where---\"; where.exe node 2>&1)",
+      "PowerShell($env:Path += \";C:\\\\Program Files\\\\nodejs\"; & \"C:\\\\Program Files\\\\nodejs\\\\node.exe\" --version; & \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" --version)",
+      "PowerShell($env:Path += \";C:\\\\Program Files\\\\nodejs\"; cd \"c:\\\\Users\\\\CM\\\\Documents\\\\GitHub\\\\My-Invite-UI\"; & \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" install --no-audit --no-fund 2>&1 | Select-Object -Last 80)",
+      "PowerShell($env:Path += \";C:\\\\Program Files\\\\nodejs\"; cd \"c:\\\\Users\\\\CM\\\\Documents\\\\GitHub\\\\My-Invite-UI\"; & \"C:\\\\Program Files\\\\nodejs\\\\node.exe\" node_modules\\\\@angular\\\\cli\\\\bin\\\\ng.js build --configuration development 2>&1 | Select-Object -Last 200)",
+      "PowerShell($env:Path += \";C:\\\\Program Files\\\\nodejs\"; cd \"c:\\\\Users\\\\CM\\\\Documents\\\\GitHub\\\\My-Invite-UI\"; & \"C:\\\\Program Files\\\\nodejs\\\\node.exe\" node_modules\\\\@angular\\\\cli\\\\bin\\\\ng.js build --configuration development 2>&1 | Select-Object -Last 250)",
+      "WebFetch(domain:specialcart-dashboard.tryasp.net)"
     ]
   }
 }

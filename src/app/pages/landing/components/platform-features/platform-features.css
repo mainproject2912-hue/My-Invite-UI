@@ -1,0 +1,76 @@
+.pf-section {
+  background-color: var(--bg);
+}
+
+.pf-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.pf-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.pf-group-title {
+  font-family: var(--font-heading, '29LTBukra', 'Cairo', sans-serif);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--gold);
+  margin: 0 0 20px;
+}
+
+.pf-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+@media (max-width: 960px) {
+  .pf-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .pf-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pf-card {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pf-card-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--gold);
+}
+
+.pf-card-title {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text);
+  margin: 0;
+}
+
+.pf-card-body {
+  color: var(--text-muted);
+  font-size: 13.5px;
+  line-height: 1.75;
+  margin: 0;
+}

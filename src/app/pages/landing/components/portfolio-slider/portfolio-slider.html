@@ -14,6 +14,18 @@
     </button>
     }
   </div>
+
+  <div class="filters-container gender-filters">
+    <button class="filter-pill" [class.active-gold]="activeGender() === null" (click)="setGender(null)">
+      {{ 'portfolioSlider.genderAll' | transloco }}
+    </button>
+    <button class="filter-pill" [class.active-gold]="activeGender() === 'ذكوري'" (click)="setGender('ذكوري')">
+      {{ 'portfolioSlider.genderMale' | transloco }}
+    </button>
+    <button class="filter-pill" [class.active-gold]="activeGender() === 'أنثوي'" (click)="setGender('أنثوي')">
+      {{ 'portfolioSlider.genderFemale' | transloco }}
+    </button>
+  </div>
 </div>
 
 <div class="gallery-carousel-wrap">

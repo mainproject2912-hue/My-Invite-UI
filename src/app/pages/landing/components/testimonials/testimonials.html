@@ -1,0 +1,40 @@
+<section id="reviews" class="testimonials-section section-py">
+  <div class="testimonials-inner">
+    <div class="testimonials-header">
+      <span class="badge-pill">{{ 'testimonialsSection.kicker' | transloco }}</span>
+      <h2 class="section-title font-display">{{ 'testimonialsSection.title' | transloco }}</h2>
+      <p class="section-sub">{{ 'testimonialsSection.subtitle' | transloco }}</p>
+    </div>
+
+    @if (testimonials().length > 0) {
+      <div class="testimonials-grid">
+        @for (t of testimonials(); track t.id) {
+          <div class="testimonial-card sc-hover-card">
+            <div class="testimonial-stars">
+              @for (s of stars; track s) {
+                <svg
+                  width="16" height="16" viewBox="0 0 24 24"
+                  class="testimonial-star"
+                  [class.filled]="s < t.rating"
+                  [attr.fill]="s < t.rating ? 'url(#goldGrad)' : 'none'"
+                  stroke="url(#goldGrad)" stroke-width="1.5"
+                >
+                  <polygon points="12 2 15.09 8.63 22 9.24 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.24 8.91 8.63 12 2"></polygon>
+                </svg>
+              }
+            </div>
+            <p class="testimonial-content">"{{ t.content }}"</p>
+            <div class="testimonial-footer">
+              <span class="testimonial-name">{{ t.name }}</span>
+              @if (t.role) {
+                <span class="testimonial-role">{{ t.role }}</span>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    } @else {
+      <p class="testimonials-empty">{{ 'testimonialsSection.emptyMessage' | transloco }}</p>
+    }
+  </div>
+</section>

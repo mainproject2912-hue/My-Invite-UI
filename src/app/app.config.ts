@@ -22,6 +22,7 @@ import {
   Mars, Venus, FileX, MessageCircle,
   CheckCheck, HeartHandshake, Copy,
   CircleCheck, CircleX,
+  QrCode, Bell, BarChart3, UserPlus, ScanLine, ShieldCheck, Gift, Quote, Building2,
 } from 'lucide-angular';
 
 import { routes } from './app.routes';
@@ -69,6 +70,7 @@ export const appConfig: ApplicationConfig = {
       Mars, Venus, FileX, MessageCircle,
       CheckCheck, HeartHandshake, Copy,
       CircleCheck, CircleX,
+      QrCode, Bell, BarChart3, UserPlus, ScanLine, ShieldCheck, Gift, Quote, Building2,
     }))
   ]
 };

@@ -18,6 +18,15 @@
         <a href="#contact" class="btn-gold hero-btn-primary" (click)="scrollService.scrollTo($event, 'contact')">{{ 'hero.cta1' | transloco }}</a>
         <a href="#gallery" class="hero-btn-outline" (click)="scrollService.scrollTo($event, 'gallery')">{{ 'hero.cta2' | transloco }}</a>
       </div>
+
+      <div class="hero-badges-row">
+        @for (badge of badges; track badge.key) {
+          <span class="hero-badge">
+            <lucide-icon [name]="badge.icon" class="hero-badge-icon"></lucide-icon>
+            {{ badge.key | transloco }}
+          </span>
+        }
+      </div>
     </div>
 
     <div class="hero-img">

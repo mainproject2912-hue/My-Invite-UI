@@ -18,12 +18,24 @@
     <app-why-choose-us></app-why-choose-us>
   </div>
 
+  <div appScrollReveal revealDirection="right" [revealDelay]="50">
+    <app-platform-features></app-platform-features>
+  </div>
+
   <div id="how-it-works" appScrollReveal revealDirection="right" [revealDelay]="50">
     <app-how-it-works></app-how-it-works>
   </div>
 
   <div id="gallery" appScrollReveal revealDirection="right">
     <app-portfolio-slider [invitations]="invitations()" [categories]="categories()"></app-portfolio-slider>
+  </div>
+
+  <div appScrollReveal revealDirection="right" [revealDelay]="50">
+    <app-order-request></app-order-request>
+  </div>
+
+  <div appScrollReveal revealDirection="right" [revealDelay]="50">
+    <app-testimonials></app-testimonials>
   </div>
 
   <div appScrollReveal revealDirection="right" [revealDelay]="50">
@@ -43,6 +55,10 @@
   </div>
 
   <div appScrollReveal revealDirection="right" [revealDelay]="50">
+    <app-faq></app-faq>
+  </div>
+
+  <div appScrollReveal revealDirection="right" [revealDelay]="50">
     <app-why-riyadh></app-why-riyadh>
   </div>
 
@@ -56,9 +72,9 @@
     <app-privacy-section></app-privacy-section>
   </div>
 
-  <div appScrollReveal revealDirection="right" [revealDelay]="50">
+  <!-- <div appScrollReveal revealDirection="right" [revealDelay]="50">
     <app-contact></app-contact>
-  </div>
+  </div> -->
 
   <div appScrollReveal revealDirection="right" [revealDelay]="50">
     <app-final-cta></app-final-cta>
