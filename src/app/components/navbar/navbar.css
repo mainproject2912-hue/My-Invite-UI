@@ -36,10 +36,27 @@
   text-decoration: none;
   transition: opacity 0.2s ease, color 0.2s ease;
   white-space: nowrap;
+  position: relative;
+  padding: 4px 0;
 }
 .nav-link:hover {
   opacity: 1;
   color: #E3C07E;
+}
+.nav-link.active {
+  opacity: 1;
+  color: #E3C07E;
+  font-weight: 700;
+}
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #E3C07E;
+  border-radius: 2px;
 }
 
 .nav-dropdown {

@@ -1,0 +1,16 @@
+.journey-section {
+  position: relative;
+}
+
+.journey-card {
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  min-height: 220px;
+}
+
+.journey-card:hover {
+  border-color: rgba(195, 160, 89, 0.6);
+  box-shadow: 0 12px 30px rgba(195, 160, 89, 0.12);
+}
+

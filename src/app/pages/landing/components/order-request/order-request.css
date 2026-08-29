@@ -1,5 +1,8 @@
 .order-section {
-  background-color: var(--bg-secondary);
+  background-color: #f8fafc;
+  padding: 90px 0;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
 }
 
 .order-inner {
@@ -17,11 +20,22 @@
   margin-bottom: 36px;
 }
 
+.order-header .section-title {
+  color: #0f172a !important;
+  font-weight: 800;
+}
+
+.order-header .section-sub {
+  color: #334155 !important;
+  font-weight: 500;
+}
+
 .order-card {
-  background: var(--bg-card);
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius-card-lg);
-  padding: 32px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 20px;
+  padding: 36px 32px;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
 }
 
 .entity-toggle {
@@ -38,10 +52,10 @@
   gap: 8px;
   padding: 12px;
   border-radius: 10px;
-  border: 1.5px solid var(--border);
-  background: var(--bg-surface);
-  color: var(--text-secondary);
-  font-family: 'Cairo', sans-serif;
+  border: 1.5px solid rgba(15, 23, 42, 0.15);
+  background: #f8fafc;
+  color: #334155;
+  font-family: inherit;
   font-weight: 700;
   font-size: 14px;
   cursor: pointer;
@@ -49,9 +63,9 @@
 }
 
 .entity-btn.active {
-  background: var(--gold-gradient);
-  border-color: transparent;
-  color: #0B1320;
+  background: #0f172a;
+  border-color: #0f172a;
+  color: #ffffff;
 }
 
 .order-form {
@@ -75,10 +89,10 @@
 
 .order-label {
   display: block;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
   margin-bottom: 7px;
-  color: var(--text);
+  color: #0f172a;
 }
 
 .order-submit {

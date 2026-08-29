@@ -8,29 +8,24 @@ import { FooterComponent } from '../../components/footer/footer';
 
 // Sub-components
 import { HeroComponent } from './components/hero/hero';
-import { AboutComponent } from './components/about/about';
 import { PlatformModulesComponent } from './components/platform-modules/platform-modules';
+import { PortfolioSliderComponent } from './components/portfolio-slider/portfolio-slider';
+import { JourneyVisualizerComponent } from './components/journey-visualizer/journey-visualizer';
+import { HowItWorksComponent } from './components/how-it-works/how-it-works';
 import { WhyChooseUsComponent } from './components/why-choose-us/why-choose-us';
 import { SmartSystemComponent } from './components/smart-system/smart-system';
-import { ReceptionManagementComponent } from './components/reception-management/reception-management';
+import { PricingComponent } from './components/pricing/pricing';
 import { AppShowcaseComponent } from './components/app-showcase/app-showcase';
+import { TestimonialsComponent } from './components/testimonials/testimonials';
 import { WhyRiyadhComponent } from './components/why-riyadh/why-riyadh';
-import { TechPlatformComponent } from './components/tech-platform/tech-platform';
 import { PrivacySectionComponent } from './components/privacy-section/privacy-section';
 import { FinalCtaComponent } from './components/final-cta/final-cta';
-import { HowItWorksComponent } from './components/how-it-works/how-it-works';
 import { DemoFormComponent } from './components/demo-form/demo-form';
-import { PricingComponent } from './components/pricing/pricing';
-import { PortfolioSliderComponent } from './components/portfolio-slider/portfolio-slider';
-import { SupervisorsComponent } from './components/supervisors/supervisors';
-import { AdditionalServicesComponent } from './components/additional-services/additional-services';
 import { BlogComponent } from './components/blog/blog';
 import { ContactComponent } from './components/contact/contact';
 import { OrderModalComponent } from '../../components/order-modal/order-modal.component';
-import { PlatformFeaturesComponent } from './components/platform-features/platform-features';
-import { OrderRequestComponent } from './components/order-request/order-request';
-import { TestimonialsComponent } from './components/testimonials/testimonials';
 import { FaqComponent } from './components/faq/faq';
+import { OrderRequestComponent } from './components/order-request/order-request';
 
 @Component({
   selector: 'app-landing',
@@ -40,29 +35,24 @@ import { FaqComponent } from './components/faq/faq';
     NavbarComponent,
     FooterComponent,
     HeroComponent,
-    AboutComponent,
     PlatformModulesComponent,
+    PortfolioSliderComponent,
+    JourneyVisualizerComponent,
+    HowItWorksComponent,
     WhyChooseUsComponent,
     SmartSystemComponent,
-    ReceptionManagementComponent,
-    AppShowcaseComponent,
-    WhyRiyadhComponent,
-    TechPlatformComponent,
-    PrivacySectionComponent,
-    FinalCtaComponent,
-    HowItWorksComponent,
-    DemoFormComponent,
     PricingComponent,
-    PortfolioSliderComponent,
-    SupervisorsComponent,
-    AdditionalServicesComponent,
-    BlogComponent,
-    ContactComponent,
-    OrderModalComponent,
-    PlatformFeaturesComponent,
     OrderRequestComponent,
+    AppShowcaseComponent,
     TestimonialsComponent,
-    FaqComponent
+    WhyRiyadhComponent,
+    PrivacySectionComponent,
+    ContactComponent,
+    FinalCtaComponent,
+    DemoFormComponent,
+    BlogComponent,
+    FaqComponent,
+    OrderModalComponent
   ],
   templateUrl: './landing.html',
   styleUrl: './landing.css'

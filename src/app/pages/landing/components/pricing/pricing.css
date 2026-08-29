@@ -8,84 +8,84 @@
    =================================================== */
 
 .packages-section {
-  padding: 110px 32px;
+  padding: 90px 32px;
+  background: #f8fafc;
 }
 
 .packages-inner {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 /* ===== HEADER ===== */
 .packages-header {
   text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: 56px;
 }
 
 .packages-title {
-  font-weight: 700;
-  font-size: 38px;
-  color: #201F2E;
+  font-weight: 800;
+  font-size: clamp(28px, 4vw, 38px);
+  color: #0f172a;
   margin: 0;
 }
 
-/* ===== GRID =====
-   Sized by content (auto-fit) rather than a fixed 3-column layout, so
-   it holds up whether the backend has 2 active packages (today) or
-   more later — the reference's fixed 3-card assumption doesn't hold
-   once package count is backend-driven instead of hardcoded. */
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 24px;
-  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  align-items: center;
 }
 
 /* ===== CARD (light, default) ===== */
 .price-card {
   position: relative;
-  background: #FBF8F1;
-  border: 1px solid rgba(27, 31, 51, 0.1);
-  border-radius: 8px;
-  padding: 36px 30px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 20px;
+  padding: 36px 28px;
   display: flex;
   flex-direction: column;
   gap: 4px;
   text-align: start;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
 }
+
 .price-card:hover {
-  border-color: #B8873B;
+  border-color: #d4af37;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -4px rgba(15, 23, 42, 0.1);
 }
 
 .price-plan-name {
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #8A6526;
-  margin-bottom: 18px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 12px;
 }
 
 .price-amount-row {
   display: flex;
   align-items: baseline;
-  gap: 8px;
+  gap: 6px;
 }
 .price-amount {
-  font-size: 52px;
-  font-weight: 600;
-  font-family: 'Thmanyah Serif Display', serif;
-  color: #201F2E;
+  font-size: 42px;
+  font-weight: 800;
+  color: #0f172a;
   line-height: 1;
 }
 .price-currency {
-  font-size: 15px;
-  color: #6B6858;
+  font-size: 16px;
+  font-weight: 700;
+  color: #475569;
 }
 .price-count-label {
-  font-size: 13px;
-  color: #6B6858;
+  font-size: 14px;
+  color: #64748b;
   margin: 4px 0 0;
+  font-weight: 500;
 }
 
 /* Compact per-card tier selector — the backend models each package as

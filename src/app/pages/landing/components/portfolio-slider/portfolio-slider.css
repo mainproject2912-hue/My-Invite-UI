@@ -1,8 +1,8 @@
 .gallery-section {
-  background: #FBF8F1;
-  padding: 110px 0;
-  border-top: 1px solid rgba(27, 31, 51, 0.08);
-  border-bottom: 1px solid rgba(27, 31, 51, 0.08);
+  background: #f8fafc;
+  padding: 80px 0;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
 }
 
 .gallery-inner {
@@ -13,13 +13,13 @@
 
 .gallery-header {
   text-align: center;
-  margin-bottom: 44px;
+  margin-bottom: 36px;
 }
 
 .gallery-title {
-  font-weight: 700;
-  font-size: 38px;
-  color: #201F2E;
+  font-weight: 800;
+  font-size: clamp(28px, 4vw, 38px);
+  color: #0f172a;
   margin: 0;
 }
 
@@ -28,19 +28,19 @@
   gap: 12px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .gender-filters {
-  margin-top: -24px;
+  margin-top: -18px;
 }
 
 .filter-pill {
-  background: #fff;
-  border: 1px solid rgba(27, 31, 51, 0.12);
-  color: #201F2E;
-  padding: 10px 22px;
-  border-radius: 100px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  color: #0f172a;
+  padding: 8px 20px;
+  border-radius: 9999px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -50,15 +50,15 @@
 }
 
 .filter-pill:hover, .filter-pill:focus-visible {
-  border-color: #B8873B;
-  color: #8A6526;
+  border-color: #d4af37;
+  color: #b45309;
 }
 
 .filter-pill.active-gold {
-  background: var(--gold-gradient);
-  border-color: transparent;
-  color: #14172A;
-  box-shadow: 0 8px 20px -6px rgba(184, 135, 59, 0.5);
+  background: #0f172a;
+  border-color: #0f172a;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.2);
 }
 
 .gallery-carousel-wrap {

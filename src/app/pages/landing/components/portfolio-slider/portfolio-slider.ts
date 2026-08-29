@@ -72,7 +72,7 @@ export class PortfolioSliderComponent {
       }, 50);
     }
 
-    return items;
+    return items.slice(0, 10);
   });
 
   setCategory(cat: string | null) {

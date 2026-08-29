@@ -1,46 +1,52 @@
-<section class="platform-section">
-  <div class="platform-inner">
-    <div class="platform-header">
-      <span class="platform-kicker font-display">{{ 'platform.kicker' | transloco }}</span>
-      <h2 class="platform-title font-display">{{ 'platform.title' | transloco }}</h2>
+<section id="platform" class="platform-section py-20 bg-slate-50 border-y border-slate-200">
+  <div class="platform-inner max-w-6xl mx-auto px-4">
+    <div class="platform-header text-center mb-12">
+      <h2 class="platform-title text-3xl md:text-4xl font-extrabold text-slate-900 font-display">
+        {{ 'platform.title' | transloco }}
+      </h2>
     </div>
 
-    <div class="platform-grid">
-      <div class="platform-card sc-hover-card">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="url(#goldGrad)" stroke-width="1.4">
-          <path d="M3 11l9-7 9 7"></path>
-          <path d="M5 10v9h14v-9"></path>
-        </svg>
-        <h3 class="platform-card-title">{{ 'platform.item0.title' | transloco }}</h3>
-        <p class="platform-card-body">{{ 'platform.item0.body' | transloco }}</p>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
+      <div class="platform-card bg-white border border-slate-200/80 rounded-2xl p-6 text-center flex flex-col items-center gap-3 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer">
+        <div class="w-14 h-14 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center text-2xl">
+          💍
+        </div>
+        <h3 class="platform-card-title text-base font-bold text-slate-900">زفاف</h3>
       </div>
 
-      <div class="platform-card sc-hover-card">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="url(#goldGrad)" stroke-width="1.4">
-          <path d="M4 9l1-5h16l1 5"></path>
-          <path d="M4 9v10h16V9"></path>
-          <path d="M9 19v-6h6v6"></path>
-        </svg>
-        <h3 class="platform-card-title">{{ 'platform.item1.title' | transloco }}</h3>
-        <p class="platform-card-body">{{ 'platform.item1.body' | transloco }}</p>
+      <div class="platform-card bg-white border border-slate-200/80 rounded-2xl p-6 text-center flex flex-col items-center gap-3 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer">
+        <div class="w-14 h-14 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center text-2xl">
+          💎
+        </div>
+        <h3 class="platform-card-title text-base font-bold text-slate-900">خطوبة</h3>
       </div>
 
-      <div class="platform-card sc-hover-card">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="url(#goldGrad)" stroke-width="1.4">
-          <path d="M4 6h16M4 6a2 2 0 1 0 4 0M4 6a2 2 0 1 1 4 0M20 6a2 2 0 1 1-4 0M20 6a2 2 0 1 0-4 0"></path>
-          <path d="M4 18h16M4 18a2 2 0 1 0 4 0M4 18a2 2 0 1 1 4 0M20 18a2 2 0 1 1-4 0M20 18a2 2 0 1 0-4 0"></path>
-        </svg>
-        <h3 class="platform-card-title">{{ 'platform.item2.title' | transloco }}</h3>
-        <p class="platform-card-body">{{ 'platform.item2.body' | transloco }}</p>
+      <div class="platform-card bg-white border border-slate-200/80 rounded-2xl p-6 text-center flex flex-col items-center gap-3 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer">
+        <div class="w-14 h-14 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center text-2xl">
+          🎓
+        </div>
+        <h3 class="platform-card-title text-base font-bold text-slate-900">تخرج</h3>
       </div>
 
-      <div class="platform-card sc-hover-card">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="url(#goldGrad)" stroke-width="1.4">
-          <rect x="6" y="2" width="12" height="20" rx="2.5"></rect>
-          <path d="M10.5 18h3"></path>
-        </svg>
-        <h3 class="platform-card-title">{{ 'platform.item3.title' | transloco }}</h3>
-        <p class="platform-card-body">{{ 'platform.item3.body' | transloco }}</p>
+      <div class="platform-card bg-white border border-slate-200/80 rounded-2xl p-6 text-center flex flex-col items-center gap-3 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer">
+        <div class="w-14 h-14 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center text-2xl">
+          👶
+        </div>
+        <h3 class="platform-card-title text-base font-bold text-slate-900">مواليد</h3>
+      </div>
+
+      <div class="platform-card bg-white border border-slate-200/80 rounded-2xl p-6 text-center flex flex-col items-center gap-3 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer">
+        <div class="w-14 h-14 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center text-2xl">
+          🎂
+        </div>
+        <h3 class="platform-card-title text-base font-bold text-slate-900">أعياد ميلاد</h3>
+      </div>
+
+      <div class="platform-card bg-white border border-slate-200/80 rounded-2xl p-6 text-center flex flex-col items-center gap-3 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer">
+        <div class="w-14 h-14 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center text-2xl">
+          🎁
+        </div>
+        <h3 class="platform-card-title text-base font-bold text-slate-900">مناسبات أخرى</h3>
       </div>
     </div>
   </div>

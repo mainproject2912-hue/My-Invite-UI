@@ -1,6 +1,7 @@
 .site-footer {
-  background: #0F1120;
+  background: #0b0f19;
   padding: 64px 32px 28px;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .footer-inner {
@@ -14,7 +15,7 @@
   grid-template-columns: 1.3fr 1fr 1fr 1fr;
   gap: 32px;
   padding-bottom: 36px;
-  border-bottom: 1px solid rgba(243, 238, 229, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-col {
@@ -29,34 +30,37 @@
 }
 
 .footer-logo {
-  color: #F3EEE5;
+  color: #ffffff;
 }
 
 .footer-tagline {
-  font-size: 12.5px;
-  color: rgba(243, 238, 229, 0.5);
+  font-size: 13.5px;
+  color: #e2e8f0;
   margin: 0;
-  max-width: 220px;
+  max-width: 260px;
   line-height: 1.8;
+  font-weight: 400;
 }
 
 .footer-col-title {
-  font-size: 13px;
-  font-weight: 700;
-  color: #D9B679;
+  font-size: 15px;
+  font-weight: 800;
+  color: #eab308;
 }
 
 .footer-link {
-  color: rgba(243, 238, 229, 0.65);
+  color: #cbd5e1;
   font-size: 14px;
   text-decoration: none;
   transition: color 0.2s ease;
+  font-weight: 500;
 }
-.footer-link:hover { color: #D9B679; }
+.footer-link:hover { color: #eab308; }
 
 .footer-static-item {
-  color: rgba(243, 238, 229, 0.65);
+  color: #cbd5e1;
   font-size: 14px;
+  font-weight: 500;
 }
 
 .footer-social-row {

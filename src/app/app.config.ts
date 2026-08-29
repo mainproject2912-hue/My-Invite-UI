@@ -22,7 +22,8 @@ import {
   Mars, Venus, FileX, MessageCircle,
   CheckCheck, HeartHandshake, Copy,
   CircleCheck, CircleX,
-  QrCode, Bell, BarChart3, UserPlus, ScanLine, ShieldCheck, Gift, Quote, Building2,
+  QrCode, Bell, BarChart3, UserPlus, ScanLine, ShieldCheck, Gift, Quote, Building2, LayoutDashboard,
+  Lightbulb, UserCheck
 } from 'lucide-angular';
 
 import { routes } from './app.routes';
@@ -34,10 +35,6 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(withFetch(), withInterceptors([acceptLanguageInterceptor])),
     provideClientHydration(withEventReplay(), withNoHttpTransferCache()),
     provideAnimations(),
-    // Transloco config is now derived entirely from the Language Registry
-    // (Phase 2) rather than a second, separately maintained literal list —
-    // adding a language later means adding one registry entry, not touching
-    // this config too.
     provideTransloco({
       config: {
         availableLangs: [...SUPPORTED_LANGUAGE_CODES],
@@ -48,19 +45,12 @@ export const appConfig: ApplicationConfig = {
       },
       loader: TranslocoHttpLoader,
     }),
-    // Eagerly construct LanguageService/FontService at bootstrap so
-    // FontService's reactive effect is already subscribed by the time the
-    // locale route resolver sets the active language — belt-and-suspenders
-    // against any ordering surprise, on both server and client.
     provideAppInitializer(() => {
       inject(LanguageService);
       inject(FontService);
-      // No-ops on the server (RespondIoService guards on isPlatformBrowser);
-      // injects the chat widget script once, on first browser bootstrap.
       inject(RespondIoService).loadWidget();
     }),
     importProvidersFrom(LucideAngularModule.pick({
-      // existing
       Heart, GraduationCap, Briefcase, Landmark, Users, User, Check,
       Star, ArrowRight, ArrowLeft, Play, Calendar, Clock, MapPin, Mail, Phone, MessageSquare,
       Send, Menu, X, ChevronDown, ChevronUp, ChevronRight, ChevronLeft,
@@ -70,7 +60,8 @@ export const appConfig: ApplicationConfig = {
       Mars, Venus, FileX, MessageCircle,
       CheckCheck, HeartHandshake, Copy,
       CircleCheck, CircleX,
-      QrCode, Bell, BarChart3, UserPlus, ScanLine, ShieldCheck, Gift, Quote, Building2,
+      QrCode, Bell, BarChart3, UserPlus, ScanLine, ShieldCheck, Gift, Quote, Building2, LayoutDashboard,
+      Lightbulb, UserCheck
     }))
   ]
 };

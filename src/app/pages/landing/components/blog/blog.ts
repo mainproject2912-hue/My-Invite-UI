@@ -17,6 +17,7 @@ export class BlogComponent {
   blogPosts = input<BlogPost[]>([]);
   private languageService = inject(LanguageService);
 
+  readonly displayedPosts = computed(() => (this.blogPosts() || []).slice(0, 3));
   readMoreIcon = computed(() => this.languageService.activeLanguage().direction === 'rtl' ? 'arrow-left' : 'arrow-right');
 
   constructor(private router: Router) {}

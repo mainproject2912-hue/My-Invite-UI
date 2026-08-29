@@ -13,7 +13,7 @@
 
     <!-- Blog Posts Grid -->
     <div class="grid md:grid-cols-3 gap-6">
-      @for (post of blogPosts(); track post.id) {
+      @for (post of displayedPosts(); track post.id) {
         <article class="blog-card group cursor-pointer" (click)="navigateToPost(post.id)">
 
           <!-- Image -->

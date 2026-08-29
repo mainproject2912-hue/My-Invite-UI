@@ -9,28 +9,11 @@
 
     <!-- Desktop nav links -->
     <nav class="nav-desktop">
-      <a href="#hero" class="nav-link" (click)="smoothScroll($event, '#')">{{ 'navbar.home' | transloco }}</a>
-
-      <div class="nav-dropdown" #solutionsRef>
-        <button type="button" class="nav-link nav-dropdown-trigger" (click)="toggleSolutions()">
-          {{ 'navbar.solutions' | transloco }}
-          <lucide-icon name="chevron-down" class="w-3.5 h-3.5 nav-dropdown-chevron" [class.rotated]="isSolutionsOpen"></lucide-icon>
-        </button>
-        @if (isSolutionsOpen) {
-          <div class="nav-dropdown-panel">
-            @for (key of categoryKeys; track key) {
-              <a href="#gallery" class="nav-dropdown-item" (click)="smoothScroll($event, '#gallery')">
-                {{ 'navbar.categories.' + key | transloco }}
-              </a>
-            }
-          </div>
-        }
-      </div>
-
+      <a href="#hero" class="nav-link active" (click)="smoothScroll($event, '#')">{{ 'navbar.home' | transloco }}</a>
       <a href="#gallery" class="nav-link" (click)="smoothScroll($event, '#gallery')">{{ 'navbar.designs' | transloco }}</a>
-      <a href="#packages" class="nav-link" (click)="smoothScroll($event, '#packages')">{{ 'navbar.packages' | transloco }}</a>
-      <a href="#app" class="nav-link" (click)="smoothScroll($event, '#app')">{{ 'navbar.app' | transloco }}</a>
-      <a href="#why" class="nav-link" (click)="smoothScroll($event, '#why')">{{ 'navbar.why' | transloco }}</a>
+      <a href="#platform" class="nav-link" (click)="smoothScroll($event, '#platform')">{{ 'navbar.categoriesTitle' | transloco }}</a>
+      <a href="#how-it-works" class="nav-link" (click)="smoothScroll($event, '#how-it-works')">{{ 'navbar.howItWorks' | transloco }}</a>
+      <a href="#reviews" class="nav-link" (click)="smoothScroll($event, '#reviews')">{{ 'testimonialsSection.kicker' | transloco }}</a>
       <a href="#contact" class="nav-link" (click)="smoothScroll($event, '#contact')">{{ 'navbar.contact' | transloco }}</a>
     </nav>
 

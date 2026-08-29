@@ -1,111 +1,95 @@
 <app-navbar></app-navbar>
 @if (showOrderModal()) {
-  <app-order-modal></app-order-modal>
+<app-order-modal></app-order-modal>
 }
 
 <main class="landing-main" style="overflow-x: hidden;">
+  <!-- 1. HERO + TRUST BAR -->
   <app-hero></app-hero>
 
-  <div appScrollReveal revealDirection="right">
-    <app-about></app-about>
-  </div>
-
-  <div appScrollReveal revealDirection="right" [revealDelay]="50">
-    <app-platform-modules></app-platform-modules>
-  </div>
-
-  <div appScrollReveal revealDirection="right" [revealDelay]="50">
-    <app-why-choose-us></app-why-choose-us>
-  </div>
-
-  <div appScrollReveal revealDirection="right" [revealDelay]="50">
-    <app-platform-features></app-platform-features>
-  </div>
-
-  <div id="how-it-works" appScrollReveal revealDirection="right" [revealDelay]="50">
-    <app-how-it-works></app-how-it-works>
-  </div>
-
+  <!-- 2. POPULAR DESIGNS / تصاميمنا الأكثر طلباً (Visual designs gallery directly after Hero) -->
   <div id="gallery" appScrollReveal revealDirection="right">
     <app-portfolio-slider [invitations]="invitations()" [categories]="categories()"></app-portfolio-slider>
   </div>
 
-  <div appScrollReveal revealDirection="right" [revealDelay]="50">
-    <app-order-request></app-order-request>
+  <!-- 3. FREE DEMO BANNER / Lead Magnet (جرّب دعوتك مجانًا) -->
+  <div id="demo" appScrollReveal revealDirection="right" [revealDelay]="50">
+    <app-demo-form></app-demo-form>
   </div>
 
+  <!-- 4. CUSTOMER FUNNEL JOURNEY / مسار الرحلة الـ 6 خطوات -->
   <div appScrollReveal revealDirection="right" [revealDelay]="50">
-    <app-testimonials></app-testimonials>
+    <app-journey-visualizer></app-journey-visualizer>
   </div>
 
+  <!-- 5. EVENT TYPES / مناسبتك أيًا كانت... -->
+  <div appScrollReveal revealDirection="right" [revealDelay]="50">
+    <app-platform-modules></app-platform-modules>
+  </div>
+
+  <!-- 6. HOW IT WORKS / كيف يعمل النظام؟ -->
+  <div id="how-it-works" appScrollReveal revealDirection="right" [revealDelay]="50">
+    <app-how-it-works></app-how-it-works>
+  </div>
+
+  <!-- 7. WHY SPECIAL CARDS / ليش تختار Special Cards؟ -->
+  <div id="why" appScrollReveal revealDirection="right" [revealDelay]="50">
+    <app-why-choose-us></app-why-choose-us>
+  </div>
+
+  <!-- 8. GUEST EXPERIENCE / تجربة الضيف -->
   <div appScrollReveal revealDirection="right" [revealDelay]="50">
     <app-smart-system></app-smart-system>
   </div>
 
-  <div appScrollReveal revealDirection="right" [revealDelay]="50">
-    <app-reception-management></app-reception-management>
-  </div>
-
-  <div appScrollReveal revealDirection="right" [revealDelay]="50">
-    <app-app-showcase></app-app-showcase>
-  </div>
-
-  <div appScrollReveal revealDirection="right" [revealDelay]="50">
+  <!-- 9. PRICING PACKAGES / باقات تناسب احتياجاتك -->
+  <div id="packages" appScrollReveal revealDirection="right" [revealDelay]="50">
     <app-pricing></app-pricing>
   </div>
 
-  <div appScrollReveal revealDirection="right" [revealDelay]="50">
-    <app-faq></app-faq>
+  <!-- ORDER REQUEST / طلب دعوة خاصة أو مخصصة -->
+  <div id="order" appScrollReveal revealDirection="right" [revealDelay]="50">
+    <app-order-request></app-order-request>
   </div>
 
+  <!-- 10. APP SHOWCASE / كل شيء تحت تحكمك من جوالك -->
+  <div id="app" appScrollReveal revealDirection="right" [revealDelay]="50">
+    <app-app-showcase></app-app-showcase>
+  </div>
+
+  <!-- 11. REVIEWS / آراء العملاء -->
+  <div id="reviews" appScrollReveal revealDirection="right" [revealDelay]="50">
+    <app-testimonials></app-testimonials>
+  </div>
+
+  <!-- 12. RIYADH FOCUS / تركيزنا الرياض -->
   <div appScrollReveal revealDirection="right" [revealDelay]="50">
     <app-why-riyadh></app-why-riyadh>
   </div>
 
-  <!-- Deprecated Salla Integration Section
-  <div appScrollReveal revealDirection="right" [revealDelay]="50">
-    <app-tech-platform></app-tech-platform>
-  </div>
-  -->
-
+  <!-- 13. SECURITY & PRIVACY / بيانات ضيوفك بأمان -->
   <div appScrollReveal revealDirection="right" [revealDelay]="50">
     <app-privacy-section></app-privacy-section>
   </div>
 
-  <!-- <div appScrollReveal revealDirection="right" [revealDelay]="50">
-    <app-contact></app-contact>
-  </div> -->
-
+  <!-- 14. FINAL CTA / خلّك Special... وخلّ دعوتك تتكلم عنك -->
   <div appScrollReveal revealDirection="right" [revealDelay]="50">
     <app-final-cta></app-final-cta>
   </div>
 
-  <!-- ============================================================
-       Angular-only features with no reference counterpart (Phase 3,
-       per project instructions: reference controls the base landing;
-       these are appended after it rather than interleaved). -->
-
-  <!-- Temporarily disabled per request — "ما الذي يميّزنا؟" section,
-       needed again soon. Do not delete.
-  <div appScrollReveal revealDirection="right" [revealDelay]="50">
-    <app-additional-services></app-additional-services>
-  </div>
-  -->
-
-  <div appScrollReveal revealDirection="right" [revealDelay]="50">
-    <app-demo-form></app-demo-form>
+  <!-- 15. CONTACT / تواصل معنا -->
+  <div id="contact" appScrollReveal revealDirection="right" [revealDelay]="50">
+    <app-contact></app-contact>
   </div>
 
-  <!-- Temporarily disabled per request — Supervisors section, including
-       its embedded "متوفرون في" coverage block. Needed again soon.
-       Do not delete.
-  <div appScrollReveal revealDirection="right" [revealDelay]="50">
-    <app-supervisors></app-supervisors>
-  </div>
-  -->
-
+  <!-- 16. BLOG / المدونة -->
   <div appScrollReveal revealDirection="right" [revealDelay]="50">
     <app-blog [blogPosts]="blogPosts()"></app-blog>
+  </div>
+
+  <!-- 17. FAQ / الأسئلة الشائعة -->
+  <div id="faq" appScrollReveal revealDirection="right" [revealDelay]="50">
+    <app-faq></app-faq>
   </div>
 </main>
 

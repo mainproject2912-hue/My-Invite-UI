@@ -9,5 +9,5 @@ import { TranslocoModule } from '@jsverse/transloco';
   styleUrl: './how-it-works.css'
 })
 export class HowItWorksComponent {
-  readonly steps = [0, 1, 2];
+  readonly steps = [0, 1, 2, 3];
 }

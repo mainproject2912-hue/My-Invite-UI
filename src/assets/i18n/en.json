@@ -88,6 +88,23 @@
       "body": "We aim to turn your invitation into a work of art that reaches your guests with elegance, making you proud from the first moment."
     }
   },
+  "journey": {
+    "kicker": "User Journey: From Discovery to Order",
+    "title": "Your Invitation Path: From Preview to Order",
+    "subtitle": "A seamless, integrated journey guiding you from first impression to final order with elegance and ease",
+    "step1Title": "Discover",
+    "step1Desc": "See the value and occasion management instantly in the Hero",
+    "step2Title": "Understand",
+    "step2Desc": "Grasp how the system works with simple, fluid steps",
+    "step3Title": "Convince",
+    "step3Desc": "Gain confidence in the quality by reviewing real designs",
+    "step4Title": "Try Free",
+    "step4Desc": "Test a real free preview invitation sent directly to WhatsApp",
+    "step5Title": "Register",
+    "step5Desc": "Enter your WhatsApp number to receive your preview immediately",
+    "step6Title": "Place Order",
+    "step6Desc": "Convert your preview into an active order with your chosen package"
+  },
   "platform": {
     "kicker": "We serve every occasion",
     "title": "Whatever your occasion... it deserves an invitation worthy of it",

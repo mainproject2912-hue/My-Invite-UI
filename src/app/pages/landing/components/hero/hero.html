@@ -15,7 +15,7 @@
       <p class="hero-subtitle">{{ 'hero.subtitle' | transloco }}</p>
 
       <div class="hero-cta-row">
-        <a href="#contact" class="btn-gold hero-btn-primary" (click)="scrollService.scrollTo($event, 'contact')">{{ 'hero.cta1' | transloco }}</a>
+        <a href="#demo" class="btn-gold hero-btn-primary" (click)="scrollService.scrollTo($event, 'demo')">{{ 'hero.cta1' | transloco }}</a>
         <a href="#gallery" class="hero-btn-outline" (click)="scrollService.scrollTo($event, 'gallery')">{{ 'hero.cta2' | transloco }}</a>
       </div>
 
@@ -37,6 +37,29 @@
         } @else {
           <div class="hero-phone-placeholder">{{ 'hero.mockPlaceholder' | transloco }}</div>
         }
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-trust-bar">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="trust-item">
+          <div class="trust-val">+10,000</div>
+          <div class="trust-lbl">دعوة تم تنفيذها</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-val">+5,000</div>
+          <div class="trust-lbl">عميل سعيد</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-val">تصاميم حصرية</div>
+          <div class="trust-lbl">فريدة ومميزة</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-val">دعم مستمر</div>
+          <div class="trust-lbl">قبل وبعد الطلب</div>
+        </div>
       </div>
     </div>
   </div>
