@@ -22,7 +22,7 @@
       <button class="lang-toggle-btn" (click)="toggleLanguage()" [title]="otherLanguage().label">
         {{ activeLanguage().toggleLabel }}
       </button>
-      <a href="#contact" class="btn-gold header-cta" (click)="smoothScroll($event, '#contact')">{{ 'navbar.cta' | transloco }}</a>
+      <a href="#demo" class="btn-gold header-cta" (click)="smoothScroll($event, '#demo')">{{ 'navbar.cta' | transloco }}</a>
       <button class="hamburger-btn" (click)="toggleMenu()" [title]="'navbar.menuTooltip' | transloco" aria-label="menu">
         <lucide-icon [name]="isMenuOpen ? 'x' : 'menu'" class="w-[18px] h-[18px]"></lucide-icon>
       </button>
@@ -53,7 +53,7 @@
     <a href="#app" class="mobile-link" (click)="smoothScroll($event, '#app')">{{ 'navbar.app' | transloco }}</a>
     <a href="#why" class="mobile-link" (click)="smoothScroll($event, '#why')">{{ 'navbar.why' | transloco }}</a>
     <a href="#contact" class="mobile-link" (click)="smoothScroll($event, '#contact')">{{ 'navbar.contact' | transloco }}</a>
-    <a href="#contact" class="btn-gold mobile-cta" (click)="smoothScroll($event, '#contact')">{{ 'navbar.cta' | transloco }}</a>
+    <a href="#demo" class="btn-gold mobile-cta" (click)="smoothScroll($event, '#demo')">{{ 'navbar.cta' | transloco }}</a>
   </div>
   }
 </header>

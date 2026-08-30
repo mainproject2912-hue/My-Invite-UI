@@ -62,11 +62,11 @@
             }
           </ul>
 
-          <a
-            href="#contact"
+          <button
+            type="button"
             class="price-cta"
-            (click)="scrollService.scrollTo($event, 'contact')"
-          >{{ plan.ctaLabelKey | transloco }}</a>
+            (click)="orderPlan(plan, $event)"
+          >{{ plan.ctaLabelKey | transloco }}</button>
 
         </div>
       }
@@ -88,7 +88,7 @@
     </div>
 
     <div class="text-center mt-10">
-      <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold-400/10 border border-gold-400/30 text-gold-400 hover:bg-gold-400 hover:text-navy-950 transition-all text-sm font-bold">
+      <a [routerLink]="['/', activeLanguage().code, 'packages']" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold-400/10 border border-gold-400/30 text-gold-400 hover:bg-gold-400 hover:text-navy-950 transition-all text-sm font-bold">
         <span>عرض تفاصيل الباقات</span>
         <span>←</span>
       </a>

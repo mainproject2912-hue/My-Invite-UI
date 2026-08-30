@@ -26,7 +26,6 @@ export class OrderModalComponent implements OnInit {
   private readonly transloco = inject(TranslocoService);
 
   name = '';
-  email = '';
   phone = '';
   message = '';
 
@@ -40,6 +39,17 @@ export class OrderModalComponent implements OnInit {
   dropdownOpen = signal(false);
 
   filteredCountries = computed(() => this.countriesService.filter(this.searchQuery()));
+
+  displayTitle = computed(() => {
+    const customTitle = this.designOrderService.modalTitle();
+    if (customTitle) return customTitle;
+
+    const msg = this.designOrderService.prefillMessage();
+    if (msg.includes('باقة') || msg.toLowerCase().includes('package')) {
+      return this.transloco.translate('orderModal.packageTitle');
+    }
+    return this.transloco.translate('orderModal.title');
+  });
 
   ngOnInit() {
     // Set the pre-filled message when the modal mounts (it only mounts when open)
@@ -71,7 +81,7 @@ export class OrderModalComponent implements OnInit {
 
   submit() {
     if (this.submitting()) return;
-    if (!this.name || !this.email || !this.phone || !this.message) {
+    if (!this.phone) {
       this.submitError.set(this.transloco.translate('orderModal.errors.allFieldsRequired'));
       return;
     }
@@ -80,7 +90,6 @@ export class OrderModalComponent implements OnInit {
 
     this.http.post(`${environment.apiUrl}/Contacts`, {
       name: this.name,
-      email: this.email,
       phoneNumber: `+${this.selectedCountry().dialCode}${this.phone}`,
       message: this.message,
     }).subscribe({

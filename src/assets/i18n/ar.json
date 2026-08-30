@@ -78,24 +78,6 @@
     }
   },
 
-  "journey": {
-    "kicker": "رحلة المستخدم من المشاهدة إلى الطلب",
-    "title": "مسار دعوتك: من المعاينة إلى الطلب الفعلي",
-    "subtitle": "رحلة متكاملة وسلسة تقودك من أول انطباع حتى طلب الباقة الفعيلة بكل فخامة وسهولة",
-    "step1Title": "يشوف",
-    "step1Desc": "مشاهدة القيمة وتنظيم المناسبة في الهيرو فوراً",
-    "step2Title": "يفهم",
-    "step2Desc": "فهم طريقة عمل النظام والخطوات الانسيابية بكل بساطة",
-    "step3Title": "يقتنع",
-    "step3Desc": "الاقتناع بالفخامة والجودة عند مشاهدة التصاميم الحقيقية",
-    "step4Title": "يجرب",
-    "step4Desc": "تجربة دعوة مجانية حقيقية باسمك على الواتساب",
-    "step5Title": "يسجل",
-    "step5Desc": "إدخال رقم الواتساب واستلام المعاينة فوراً",
-    "step6Title": "يطلب",
-    "step6Desc": "تحويل التجربة إلى طلب فعلي واختيار الباقة المناسبة"
-  },
-
   "about": {
     "kicker": "من نحن",
     "title": "براند سعودي متخصص في عالم الفخامة الرقمية",
@@ -350,14 +332,16 @@
 
   "demoForm": {
     "heading": "جرّب دعوتك مجانًا",
-    "infoTitle": "شاهد معاينة دعوتك باسمك، بنفس الجودة التي سيراها ضيوفك.",
-    "infoBody": "دقيقة واحدة وتصلك دعوة تجريبية مجانًا على الواتساب.",
-    "infoCta": "شاهد تجربة دعوتك باسمك قبل اتخاذ أي قرار!",
+    "infoTitle": "جرب دعوتك باسمك وبنفس الجودة قبل ما تطلب",
+    "infoBody": "دقيقة وتوصلك دعوة تجريبية مجانية على الواتساب، وإذا عجبتك تقدر تكمل طلبك بكل سهولة",
+    "infoCta": "بتوصلك رسالة تجريبية على الواتساب خلال دقيقة، وتقدر بعدها تطلب التصميم النهائي",
     "nameLabel": "الاسم (اختياري)",
     "namePlaceholder": "مثال: محمد أحمد",
     "phoneLabel": "رقم الواتساب",
     "phonePlaceholder": "أدخل الرقم بدون رمز الدولة",
     "phoneHint": "أدخل الرقم بدون رمز الدولة ودون +",
+    "eventTypeLabel": "نوع المناسبة",
+    "eventTypePlaceholder": "اختر نوع المناسبة",
     "cardSelectedNote": "✓ تم اختيار تصميم — سيُرسل إليك على الواتساب",
     "cardNotSelectedNote": "ملاحظة صغيرة: يمكنك اختيار تصميم من التصاميم أعلاه",
     "submitBtn": "جرّب دعوتك مجانًا",
@@ -394,38 +378,6 @@
     "ctaContactUs": "تواصل معنا",
     "currency": "ريال",
     "popularBadge": "الأكثر طلباً"
-  },
-
-  "orderRequest": {
-    "kicker": "اطلب الآن",
-    "title": "جاهز تبدأ مناسبتك؟",
-    "subtitle": "عبّي بياناتك وتواصل معنا مباشرة على الواتساب",
-    "entityIndividual": "فرد",
-    "entityCompany": "شركة / مؤسسة",
-    "nameLabel": "الاسم (اختياري)",
-    "namePlaceholder": "أدخل اسمك الكامل",
-    "companyNamePlaceholder": "أدخل اسم الشركة",
-    "phoneLabel": "رقم الجوال",
-    "phonePlaceholder": "5xxxxxxxx",
-    "countrySearchPlaceholder": "بحث عن دولة...",
-    "noResults": "لا توجد نتائج",
-    "emailLabel": "البريد الإلكتروني (اختياري)",
-    "emailPlaceholder": "example@email.com",
-    "guestsLabel": "العدد التقريبي للضيوف",
-    "guestsPlaceholder": "أدخل العدد التقريبي",
-    "eventTypeLabel": "نوع المناسبة",
-    "eventTypePlaceholder": "اختر نوع المناسبة",
-    "notesLabel": "ملاحظات إضافية",
-    "notesPlaceholder": "أي تفاصيل إضافية تود مشاركتها...",
-    "submitBtn": "أرسل عبر واتساب",
-    "messageIntro": "أرغب بطلب دعوة رقمية من Special Cards",
-    "messageEntity": "النوع",
-    "messageName": "الاسم",
-    "messagePhone": "الجوال",
-    "messageEmail": "البريد",
-    "messageGuests": "عدد الضيوف",
-    "messageEventType": "نوع المناسبة",
-    "messageNotes": "ملاحظات"
   },
 
   "platformFeatures": {
@@ -489,38 +441,6 @@
     "emptyMessage": "لا يوجد مشرفون متاحون حالياً."
   },
 
-  "contact": {
-    "heading": "نحن <span>هنا لمساعدتك</span>",
-    "kickerPlain": "تواصل معنا",
-    "titlePlain": "خلنا نجهز مناسبتك",
-    "intro": "عبّي الفورم وفريقنا في الرياض بيتواصل معك خلال ساعات لتحديد كل تفاصيل مناسبتك.",
-    "demoCta": "جرّب الخدمة مجانًا",
-    "locationLabel": "الموقع",
-    "phoneLabel": "الهاتف",
-    "emailLabel": "البريد الإلكتروني",
-    "formTitle": "أرسل رسالة",
-    "form": {
-      "nameLabel": "الاسم الكامل",
-      "namePlaceholder": "أدخل اسمك الكامل",
-      "emailLabel": "البريد الإلكتروني",
-      "emailPlaceholder": "أدخل بريدك الإلكتروني",
-      "phoneLabel": "رقم الجوال",
-      "phonePlaceholder": "5xxxxxxxx",
-      "countrySearchPlaceholder": "بحث عن دولة...",
-      "noResults": "لا توجد نتائج",
-      "messageLabel": "رسالتك",
-      "messagePlaceholder": "كيف يمكننا مساعدتك؟",
-      "submit": "إرسال الرسالة",
-      "submitLoading": "جاري الإرسال...",
-      "errors": {
-        "allFieldsRequired": "يرجى ملء جميع الحقول المطلوبة.",
-        "genericError": "حدث خطأ أثناء الإرسال، يرجى المحاولة مجدداً."
-      },
-      "successMessage": "تم إرسال رسالتك بنجاح، سنتواصل معك قريباً!"
-    },
-    "paymentMethodsTitle": "وسائل الدفع المتاحة"
-  },
-
   "blog": {
     "title": "المدونة <span style=\"color: var(--gold);\">والنصائح</span>",
     "viewAll": "عرض جميع المقالات",
@@ -528,15 +448,15 @@
   },
 
   "orderModal": {
-    "title": "اطلب هذا التصميم",
+    "title": "تقديم الطلب",
+    "packageTitle": "طلب الباقة",
+    "designTitle": "اطلب هذا التصميم",
     "subtitle": "أرسل بياناتك وسنتواصل معك في أقرب وقت",
     "successTitle": "تم الإرسال بنجاح!",
     "successBody": "سنتواصل معك قريباً.",
     "closeBtn": "إغلاق",
-    "nameLabel": "الاسم الكامل",
+    "nameLabel": "الاسم الكامل (اختياري)",
     "namePlaceholder": "أدخل اسمك الكامل",
-    "emailLabel": "البريد الإلكتروني",
-    "emailPlaceholder": "example@email.com",
     "phoneLabel": "رقم الجوال",
     "phonePlaceholder": "5xxxxxxxx",
     "countrySearchPlaceholder": "بحث عن دولة...",
@@ -854,6 +774,10 @@
     "designs": {
       "title": "تصاميم الدعوات الرقمية | Special Cards | مؤسسة بطاقتي الخاصة",
       "description": "اكتشف مجموعتنا الواسعة من تصاميم كروت الدعوة الرقمية الفاخرة لحفلات الزواج، التخرج، وكل المناسبات الخاصة من Special Cards."
+    },
+    "packages": {
+      "title": "باقات وأسعار الدعوات الرقمية | Special Cards | مؤسسة بطاقتي الخاصة",
+      "description": "استعرض جميع باقات وتفاصيل الدعوات الرقمية وإدارة الحضور من Special Cards واختر الباقة الأنسب لمناسبتك."
     },
     "supervisors": {
       "title": "مشرفو البوابة | Special Cards | مؤسسة بطاقتي الخاصة",

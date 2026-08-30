@@ -17,11 +17,6 @@
     <app-demo-form></app-demo-form>
   </div>
 
-  <!-- 4. CUSTOMER FUNNEL JOURNEY / مسار الرحلة الـ 6 خطوات -->
-  <div appScrollReveal revealDirection="right" [revealDelay]="50">
-    <app-journey-visualizer></app-journey-visualizer>
-  </div>
-
   <!-- 5. EVENT TYPES / مناسبتك أيًا كانت... -->
   <div appScrollReveal revealDirection="right" [revealDelay]="50">
     <app-platform-modules></app-platform-modules>
@@ -45,11 +40,6 @@
   <!-- 9. PRICING PACKAGES / باقات تناسب احتياجاتك -->
   <div id="packages" appScrollReveal revealDirection="right" [revealDelay]="50">
     <app-pricing></app-pricing>
-  </div>
-
-  <!-- ORDER REQUEST / طلب دعوة خاصة أو مخصصة -->
-  <div id="order" appScrollReveal revealDirection="right" [revealDelay]="50">
-    <app-order-request></app-order-request>
   </div>
 
   <!-- 10. APP SHOWCASE / كل شيء تحت تحكمك من جوالك -->
@@ -77,11 +67,6 @@
     <app-final-cta></app-final-cta>
   </div>
 
-  <!-- 15. CONTACT / تواصل معنا -->
-  <div id="contact" appScrollReveal revealDirection="right" [revealDelay]="50">
-    <app-contact></app-contact>
-  </div>
-
   <!-- 16. BLOG / المدونة -->
   <div appScrollReveal revealDirection="right" [revealDelay]="50">
     <app-blog [blogPosts]="blogPosts()"></app-blog>
@@ -93,4 +78,6 @@
   </div>
 </main>
 
-<app-footer></app-footer>
+<div id="contact">
+  <app-footer></app-footer>
+</div>

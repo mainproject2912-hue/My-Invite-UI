@@ -88,23 +88,6 @@
       "body": "We aim to turn your invitation into a work of art that reaches your guests with elegance, making you proud from the first moment."
     }
   },
-  "journey": {
-    "kicker": "User Journey: From Discovery to Order",
-    "title": "Your Invitation Path: From Preview to Order",
-    "subtitle": "A seamless, integrated journey guiding you from first impression to final order with elegance and ease",
-    "step1Title": "Discover",
-    "step1Desc": "See the value and occasion management instantly in the Hero",
-    "step2Title": "Understand",
-    "step2Desc": "Grasp how the system works with simple, fluid steps",
-    "step3Title": "Convince",
-    "step3Desc": "Gain confidence in the quality by reviewing real designs",
-    "step4Title": "Try Free",
-    "step4Desc": "Test a real free preview invitation sent directly to WhatsApp",
-    "step5Title": "Register",
-    "step5Desc": "Enter your WhatsApp number to receive your preview immediately",
-    "step6Title": "Place Order",
-    "step6Desc": "Convert your preview into an active order with your chosen package"
-  },
   "platform": {
     "kicker": "We serve every occasion",
     "title": "Whatever your occasion... it deserves an invitation worthy of it",
@@ -335,14 +318,16 @@
   },
   "demoForm": {
     "heading": "Try your invitation before deciding",
-    "infoTitle": "See for yourself how your invitation is delivered on WhatsApp in your name, with the same quality your guests see.",
-    "infoBody": "One minute, and you will receive a free trial invitation.",
-    "infoCta": "And now you can try all of this before making any decision!",
+    "infoTitle": "Try your invitation in your name with the same quality before ordering",
+    "infoBody": "A free demo invitation will reach you on WhatsApp within a minute, and if you like it, you can easily complete your order",
+    "infoCta": "You will receive a demo message on WhatsApp within a minute, and you can order the final design afterwards",
     "nameLabel": "Name (Optional)",
     "namePlaceholder": "e.g., John Smith",
     "phoneLabel": "WhatsApp Number",
     "phonePlaceholder": "Enter number without country code",
     "phoneHint": "Enter the number without the country code and without +",
+    "eventTypeLabel": "Event Type",
+    "eventTypePlaceholder": "Select an event type",
     "cardSelectedNote": "✓ Design selected — it will be sent to you on WhatsApp",
     "cardNotSelectedNote": "Note: You can choose a specific design from the designs above",
     "submitBtn": "Send me a trial invitation",
@@ -379,37 +364,6 @@
     "ctaContactUs": "Contact Us",
     "currency": "SAR",
     "popularBadge": "MOST POPULAR"
-  },
-  "orderRequest": {
-    "kicker": "Order Now",
-    "title": "Ready to plan your event?",
-    "subtitle": "Fill in your details and reach us directly on WhatsApp",
-    "entityIndividual": "Individual",
-    "entityCompany": "Company / Organization",
-    "nameLabel": "Name (Optional)",
-    "namePlaceholder": "Enter your full name",
-    "companyNamePlaceholder": "Enter your company name",
-    "phoneLabel": "Mobile Number",
-    "phonePlaceholder": "5xxxxxxxx",
-    "countrySearchPlaceholder": "Search for a country...",
-    "noResults": "No results found",
-    "emailLabel": "Email (Optional)",
-    "emailPlaceholder": "example@email.com",
-    "guestsLabel": "Approximate Guest Count",
-    "guestsPlaceholder": "Enter approximate count",
-    "eventTypeLabel": "Event Type",
-    "eventTypePlaceholder": "Select an event type",
-    "notesLabel": "Additional Notes",
-    "notesPlaceholder": "Any additional details you'd like to share...",
-    "submitBtn": "Send via WhatsApp",
-    "messageIntro": "I'd like to request a digital invitation from Special Cards",
-    "messageEntity": "Type",
-    "messageName": "Name",
-    "messagePhone": "Mobile",
-    "messageEmail": "Email",
-    "messageGuests": "Guest Count",
-    "messageEventType": "Event Type",
-    "messageNotes": "Notes"
   },
   "platformFeatures": {
     "kicker": "App Features",
@@ -469,52 +423,21 @@
     "retryLabel": "Retry",
     "emptyMessage": "No supervisors are available right now."
   },
-  "contact": {
-    "heading": "We're <span>Here to Help</span>",
-    "kickerPlain": "Get In Touch",
-    "titlePlain": "Let's Plan Your Event",
-    "intro": "Fill in the form and our Riyadh team will reach out within hours to arrange every detail of your event.",
-    "demoCta": "Try the service for free",
-    "locationLabel": "Location",
-    "phoneLabel": "Phone",
-    "emailLabel": "Email",
-    "formTitle": "Send a Message",
-    "form": {
-      "nameLabel": "Full Name",
-      "namePlaceholder": "Enter your full name",
-      "emailLabel": "Email",
-      "emailPlaceholder": "Enter your email",
-      "phoneLabel": "Mobile Number",
-      "phonePlaceholder": "5xxxxxxxx",
-      "countrySearchPlaceholder": "Search for a country...",
-      "noResults": "No results found",
-      "messageLabel": "Your Message",
-      "messagePlaceholder": "How can we help you?",
-      "submit": "Send Message",
-      "submitLoading": "Sending...",
-      "errors": {
-        "allFieldsRequired": "Please fill in all required fields.",
-        "genericError": "An error occurred while sending, please try again."
-      },
-      "successMessage": "Your message has been sent successfully, we'll be in touch soon!"
-    },
-    "paymentMethodsTitle": "Available Payment Methods"
-  },
   "blog": {
     "title": "Blog <span style=\"color: var(--gold);\">&amp; Tips</span>",
     "viewAll": "View All Articles",
     "readMore": "Read More"
   },
   "orderModal": {
-    "title": "Order This Design",
+    "title": "Place Your Order",
+    "packageTitle": "Order Package",
+    "designTitle": "Order This Design",
     "subtitle": "Send your details and we'll be in touch as soon as possible",
     "successTitle": "Sent Successfully!",
     "successBody": "We'll be in touch soon.",
     "closeBtn": "Close",
-    "nameLabel": "Full Name",
+    "nameLabel": "Full Name (Optional)",
     "namePlaceholder": "Enter your full name",
-    "emailLabel": "Email",
-    "emailPlaceholder": "example@email.com",
     "phoneLabel": "Mobile Number",
     "phonePlaceholder": "5xxxxxxxx",
     "countrySearchPlaceholder": "Search for a country...",
@@ -828,6 +751,10 @@
     "designs": {
       "title": "Digital Invitation Designs | Special Cards",
       "description": "Discover our wide collection of luxury digital invitation card designs for weddings, graduations, and every special occasion from Special Cards."
+    },
+    "packages": {
+      "title": "Digital Invitation Packages & Pricing | Special Cards",
+      "description": "Explore all digital invitation packages and attendance management details from Special Cards and choose the best plan for your event."
     },
     "supervisors": {
       "title": "Gate Supervisors | Special Cards",

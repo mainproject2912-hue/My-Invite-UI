@@ -76,6 +76,16 @@
               }
             </div>
 
+            <div>
+              <label class="demo-label">{{ 'demoForm.eventTypeLabel' | transloco }}</label>
+              <select class="demo-input" [(ngModel)]="eventType" name="eventType">
+                <option value="" disabled selected>{{ 'demoForm.eventTypePlaceholder' | transloco }}</option>
+                @for (et of eventTypes(); track et.id) {
+                  <option [value]="et.name">{{ et.name }}</option>
+                }
+              </select>
+            </div>
+
             @if (selectedCardId) {
               <p class="demo-note">
                 {{ 'demoForm.cardSelectedNote' | transloco }}

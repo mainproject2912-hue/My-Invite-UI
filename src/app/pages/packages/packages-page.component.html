@@ -1,0 +1,169 @@
+<app-navbar></app-navbar>
+
+@if (showOrderModal()) {
+  <app-order-modal></app-order-modal>
+}
+
+<main class="packages-page-main">
+  <!-- Hero / Header Section -->
+  <section class="packages-page-hero">
+    <div class="hero-container">
+      <nav class="breadcrumb-nav mb-6" aria-label="breadcrumb">
+        <a [routerLink]="['/', activeLanguage().code]" class="breadcrumb-link">{{ 'navbar.home' | transloco }}</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">{{ 'pricing.titlePlain' | transloco }}</span>
+      </nav>
+
+      <span class="packages-hero-badge">
+        <lucide-icon name="sparkles" class="w-4 h-4"></lucide-icon>
+        أسعار وباقات شفافة لمختلف المناسبات
+      </span>
+
+      <h1 class="packages-page-title font-display">
+        جميع باقات الدعوات الرقمية وإدارة الحضور
+      </h1>
+
+      <p class="packages-page-subtitle">
+        اختر الباقة الأنسب لمناسبتك واستمتع بتجربة إرسال الدعوات الذكية، تأكيد الحضور الفوري، وإدارة استقبال الضيوف بكل سهولة ورقي.
+      </p>
+    </div>
+  </section>
+
+  <!-- Packages Cards Grid -->
+  <section class="packages-content-section">
+    <div class="container mx-auto px-4 max-w-7xl">
+
+      @if (packagesList().length === 0) {
+        <div class="loading-box text-center py-20">
+          <div class="spinner border-4 border-gold border-t-transparent rounded-full w-12 h-12 mx-auto animate-spin mb-4"></div>
+          <p class="text-slate-400">جاري تحميل الباقات...</p>
+        </div>
+      } @else {
+        <div class="packages-grid">
+          @for (plan of packagesList(); track plan.id) {
+            <div class="package-detail-card" [class.package-popular]="plan.isPopular">
+
+              @if (plan.isPopular) {
+                <div class="popular-ribbon font-display">
+                  <lucide-icon name="star" class="w-3.5 h-3.5 fill-current inline me-1"></lucide-icon>
+                  {{ 'pricing.popularBadge' | transloco }}
+                </div>
+              }
+
+              <div class="package-card-header">
+                <h2 class="package-name font-display">{{ plan.name }}</h2>
+                @if (plan.description) {
+                  <p class="package-desc">{{ plan.description }}</p>
+                }
+              </div>
+
+              <!-- Price & Tier Display -->
+              <div class="package-pricing-box">
+                <div class="price-row">
+                  <span class="price-value font-display">{{ selectedTierFor(plan).price | number:'1.0-0' }}</span>
+                  <span class="price-unit">{{ 'pricing.currency' | transloco }}</span>
+                </div>
+                @if (selectedTierFor(plan).count > 0) {
+                  <p class="price-sublabel">
+                    يشمل {{ selectedTierFor(plan).count }} {{ 'pricing.guestsUnit' | transloco }}
+                  </p>
+                }
+              </div>
+
+              <!-- Tier Selection Buttons if multiple tiers -->
+              @if (plan.tiers.length > 1) {
+                <div class="package-tiers-wrapper">
+                  <span class="tier-section-title">{{ 'pricing.chooseCountLabel' | transloco }}:</span>
+                  <div class="tier-pills-row">
+                    @for (tier of plan.tiers; track tier.count) {
+                      <button
+                        type="button"
+                        class="pkg-tier-pill"
+                        [class.active]="isSelected(plan.id, tier.count)"
+                        (click)="selectCount(plan.id, tier.count)"
+                      >
+                        {{ tier.count }} {{ 'pricing.guestsUnit' | transloco }}
+                      </button>
+                    }
+                  </div>
+                </div>
+              }
+
+              <!-- Compensatory Bonus Card Pill if active -->
+              @if (plan.compensationPercentage > 0) {
+                <div class="compensatory-bonus-box">
+                  <lucide-icon name="gift" class="w-4 h-4 text-amber-500 flex-shrink-0"></lucide-icon>
+                  <span>
+                    {{ 'pricing.compensatoryTitle' | transloco }} {{ plan.compensationPercentage }}%
+                    ({{ compensatoryCountFor(plan) }} {{ 'pricing.compensatoryExtra' | transloco }})
+                  </span>
+                </div>
+              }
+
+              <div class="package-divider"></div>
+
+              <!-- Full Features List -->
+              <div class="package-features-block">
+                <h3 class="features-title">المميزات والخدمات المشمولة:</h3>
+                <ul class="features-list">
+                  @for (feat of plan.features; track feat) {
+                    <li>
+                      <lucide-icon name="check" class="w-4 h-4 check-icon"></lucide-icon>
+                      <span>{{ feat }}</span>
+                    </li>
+                  }
+                </ul>
+              </div>
+
+              <!-- Action CTA Button -->
+              <div class="package-action-footer">
+                <button (click)="orderPackage(plan)" class="package-cta-btn font-display">
+                  <span>{{ plan.ctaLabelKey | transloco }}</span>
+                  <lucide-icon name="arrow-left" class="w-4 h-4"></lucide-icon>
+                </button>
+              </div>
+
+            </div>
+          }
+        </div>
+      }
+
+      <!-- Extra Add-ons Section -->
+      <section class="addons-page-section mt-20">
+        <div class="addons-header text-center mb-10">
+          <h2 class="addons-main-title font-display">إضافات وخدمات مخصصة</h2>
+          <p class="addons-subtitle">يمكنك إضافة أية خدمات إضافية لباقاتك حسب احتياج مناسبتك</p>
+        </div>
+
+        <div class="addons-grid-full">
+          <div class="addon-card-full">
+            <div class="addon-icon-wrap">
+              <lucide-icon name="user-plus" class="w-6 h-6 text-amber-600"></lucide-icon>
+            </div>
+            <h3 class="addon-card-title">{{ 'addons.item0.title' | transloco }}</h3>
+            <p class="addon-card-body">{{ 'addons.item0.body' | transloco }}</p>
+          </div>
+
+          <div class="addon-card-full">
+            <div class="addon-icon-wrap">
+              <lucide-icon name="bell" class="w-6 h-6 text-amber-600"></lucide-icon>
+            </div>
+            <h3 class="addon-card-title">{{ 'addons.item1.title' | transloco }}</h3>
+            <p class="addon-card-body">{{ 'addons.item1.body' | transloco }}</p>
+          </div>
+
+          <div class="addon-card-full">
+            <div class="addon-icon-wrap">
+              <lucide-icon name="shield-check" class="w-6 h-6 text-amber-600"></lucide-icon>
+            </div>
+            <h3 class="addon-card-title">{{ 'addons.item2.title' | transloco }}</h3>
+            <p class="addon-card-body">{{ 'addons.item2.body' | transloco }}</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </section>
+</main>
+
+<app-footer></app-footer>

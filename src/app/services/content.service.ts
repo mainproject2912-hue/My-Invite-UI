@@ -49,8 +49,8 @@ export class ContentService {
     'contact-email': '',
     'contact-phone': '',
     'whatsapp-number': '',
-    'facebook-url': '',
-    'instagram-url': '',
+    'facebook-url': 'https://www.facebook.com/profile.php?id=61592715750182',
+    'instagram-url': 'https://www.instagram.com/specialcardsapp?utm_source=qr',
     'address': '',
     'design-order-message': 'يعجبني تصميم الكارت بالكود "{id}"'
   });

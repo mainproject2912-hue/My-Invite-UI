@@ -1,8 +1,8 @@
 .how-it-works-section {
   padding: 90px 32px;
-  max-width: 1200px;
-  margin: 0 auto;
   background: #ffffff;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
 }
 
 .how-header {
@@ -17,11 +17,19 @@
   margin: 0;
 }
 
+.how-subtitle {
+  color: #475569;
+  font-size: 15px;
+  margin-top: 8px;
+}
+
 .how-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 24px;
   position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .how-connector {
@@ -55,7 +63,7 @@
   font-size: 20px;
   font-weight: 800;
   z-index: 1;
-  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.2);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.15);
 }
 
 .how-step-title {
@@ -71,6 +79,20 @@
   color: #334155;
   margin: 0;
   font-weight: 500;
+}
+
+.how-summary-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 28px;
+  border-radius: 9999px;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 @media (max-width: 700px) {

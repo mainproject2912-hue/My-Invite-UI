@@ -1,0 +1,356 @@
+.packages-page-main {
+  background: #f8fafc;
+  min-height: 100vh;
+  color: #0f172a;
+  padding-bottom: 80px;
+}
+
+.packages-page-hero {
+  background: #ffffff;
+  padding: 120px 24px 60px;
+  text-align: center;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.hero-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.breadcrumb-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.breadcrumb-link {
+  color: #475569;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.breadcrumb-link:hover {
+  color: #b8860b;
+}
+
+.breadcrumb-sep {
+  color: #94a3b8;
+}
+
+.breadcrumb-current {
+  color: #b8860b;
+  font-weight: 600;
+}
+
+.packages-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  background: rgba(184, 134, 11, 0.1);
+  border: 1px solid rgba(184, 134, 11, 0.3);
+  color: #8a6526;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.packages-page-title {
+  font-size: clamp(28px, 4.5vw, 44px);
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 16px;
+  line-height: 1.3;
+}
+
+.packages-page-subtitle {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #475569;
+  margin: 0;
+}
+
+.packages-content-section {
+  padding: 60px 0;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  align-items: stretch;
+}
+
+.package-detail-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 20px;
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
+
+.package-detail-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(184, 134, 11, 0.4);
+  box-shadow: 0 16px 32px -4px rgba(15, 23, 42, 0.1);
+}
+
+.package-popular {
+  border-color: rgba(184, 134, 11, 0.5);
+  background: #ffffff;
+  box-shadow: 0 10px 30px -4px rgba(184, 134, 11, 0.18);
+}
+
+.popular-ribbon {
+  position: absolute;
+  top: -14px;
+  inset-inline-end: 24px;
+  background: linear-gradient(135deg, #f59e0b, #d4af37);
+  color: #0f172a;
+  padding: 4px 14px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(184, 134, 11, 0.3);
+}
+
+.package-card-header {
+  margin-bottom: 24px;
+}
+
+.package-name {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 8px;
+}
+
+.package-desc {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.package-pricing-box {
+  margin-bottom: 20px;
+}
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.price-value {
+  font-size: 40px;
+  font-weight: 800;
+  color: #8a6526;
+}
+
+.price-unit {
+  font-size: 16px;
+  font-weight: 700;
+  color: #475569;
+}
+
+.price-sublabel {
+  font-size: 13px;
+  color: #64748b;
+  margin: 4px 0 0;
+}
+
+.package-tiers-wrapper {
+  margin-bottom: 20px;
+}
+
+.tier-section-title {
+  display: block;
+  font-size: 13px;
+  color: #334155;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.tier-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pkg-tier-pill {
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pkg-tier-pill:hover {
+  border-color: #8a6526;
+  color: #0f172a;
+}
+
+.pkg-tier-pill.active {
+  background: #0f172a;
+  border-color: #0f172a;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.compensatory-bonus-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(184, 134, 11, 0.1);
+  border: 1px solid rgba(184, 134, 11, 0.25);
+  color: #8a6526;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.package-divider {
+  height: 1px;
+  background: rgba(15, 23, 42, 0.08);
+  margin: 20px 0;
+}
+
+.package-features-block {
+  flex-grow: 1;
+  margin-bottom: 28px;
+}
+
+.features-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 12px;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.check-icon {
+  color: #8a6526;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.package-cta-btn {
+  width: 100%;
+  padding: 14px 24px;
+  border-radius: 12px;
+  background: #0f172a;
+  color: #ffffff;
+  border: none;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 18px -4px rgba(15, 23, 42, 0.3);
+}
+
+.package-cta-btn:hover {
+  background: #1e293b;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -4px rgba(15, 23, 42, 0.4);
+}
+
+/* Addons Section */
+.addons-page-section {
+  padding-top: 40px;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.addons-main-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 8px;
+}
+
+.addons-subtitle {
+  font-size: 15px;
+  color: #475569;
+  margin: 0;
+}
+
+.addons-grid-full {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.addon-card-full {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  transition: border-color 0.2s;
+}
+
+.addon-card-full:hover {
+  border-color: rgba(184, 134, 11, 0.3);
+}
+
+.addon-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(184, 134, 11, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addon-card-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.addon-card-body {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.7;
+  margin: 0;
+}

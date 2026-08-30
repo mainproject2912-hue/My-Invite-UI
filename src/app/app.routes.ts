@@ -5,6 +5,7 @@ import { DesignsPageComponent } from './pages/designs/designs-page.component';
 import { SupervisorsPageComponent } from './pages/supervisors/supervisors-page.component';
 import { BlogPageComponent } from './pages/blog/blog-page.component';
 import { BlogPostDetailComponent } from './pages/blog/blog-post-detail.component';
+import { PackagesPageComponent } from './pages/packages/packages-page.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { TermsComponent } from './pages/terms/terms.component';
 import { CancellationPolicyComponent } from './pages/cancellation-policy/cancellation-policy.component';
@@ -46,6 +47,7 @@ const localizedChildRoutes: Routes = [
   { path: 'supervisors', component: SupervisorsPageComponent },
   { path: 'blog', component: BlogPageComponent },
   { path: 'blog/:id', component: BlogPostDetailComponent },
+  { path: 'packages', component: PackagesPageComponent },
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
   { path: 'terms', component: TermsComponent },
   { path: 'cancellation-policy', component: CancellationPolicyComponent },

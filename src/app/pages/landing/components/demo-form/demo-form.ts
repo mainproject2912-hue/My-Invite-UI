@@ -5,6 +5,7 @@ import { TranslocoService, TranslocoModule } from '@jsverse/transloco';
 import { DemoService } from '../../../../services/demo.service';
 import { CountriesService, DisplayCountry } from '../../../../shared/countries.service';
 import { ScrollService } from '../../../../services/scroll.service';
+import { ContentService } from '../../../../services/content.service';
 
 type Step = 'form' | 'otp' | 'success';
 
@@ -22,6 +23,9 @@ export class DemoFormComponent {
   private countriesService = inject(CountriesService);
   private transloco = inject(TranslocoService);
   readonly scrollService = inject(ScrollService);
+  private contentService = inject(ContentService);
+
+  readonly eventTypes = this.contentService.eventTypes;
 
   step = signal<Step>('form');
   loading = signal(false);
@@ -45,6 +49,7 @@ export class DemoFormComponent {
 
   name = '';
   phoneLocal = '';
+  eventType = '';
   otp = '';
 
   get whatsAppNumber(): string {
@@ -64,7 +69,7 @@ export class DemoFormComponent {
     }
 
     this.loading.set(true);
-    this.demoService.sendOtp(this.name.trim(), this.whatsAppNumber, this.selectedCardId ?? undefined)
+    this.demoService.sendOtp(this.name.trim(), this.whatsAppNumber, this.selectedCardId ?? undefined, this.eventType || undefined)
       .subscribe({
         next: () => {
           this.loading.set(false);

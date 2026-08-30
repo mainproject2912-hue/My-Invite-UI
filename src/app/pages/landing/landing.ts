@@ -10,7 +10,6 @@ import { FooterComponent } from '../../components/footer/footer';
 import { HeroComponent } from './components/hero/hero';
 import { PlatformModulesComponent } from './components/platform-modules/platform-modules';
 import { PortfolioSliderComponent } from './components/portfolio-slider/portfolio-slider';
-import { JourneyVisualizerComponent } from './components/journey-visualizer/journey-visualizer';
 import { HowItWorksComponent } from './components/how-it-works/how-it-works';
 import { WhyChooseUsComponent } from './components/why-choose-us/why-choose-us';
 import { SmartSystemComponent } from './components/smart-system/smart-system';
@@ -22,10 +21,8 @@ import { PrivacySectionComponent } from './components/privacy-section/privacy-se
 import { FinalCtaComponent } from './components/final-cta/final-cta';
 import { DemoFormComponent } from './components/demo-form/demo-form';
 import { BlogComponent } from './components/blog/blog';
-import { ContactComponent } from './components/contact/contact';
 import { OrderModalComponent } from '../../components/order-modal/order-modal.component';
 import { FaqComponent } from './components/faq/faq';
-import { OrderRequestComponent } from './components/order-request/order-request';
 
 @Component({
   selector: 'app-landing',
@@ -37,17 +34,14 @@ import { OrderRequestComponent } from './components/order-request/order-request'
     HeroComponent,
     PlatformModulesComponent,
     PortfolioSliderComponent,
-    JourneyVisualizerComponent,
     HowItWorksComponent,
     WhyChooseUsComponent,
     SmartSystemComponent,
     PricingComponent,
-    OrderRequestComponent,
     AppShowcaseComponent,
     TestimonialsComponent,
     WhyRiyadhComponent,
     PrivacySectionComponent,
-    ContactComponent,
     FinalCtaComponent,
     DemoFormComponent,
     BlogComponent,

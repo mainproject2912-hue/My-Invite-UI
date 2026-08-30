@@ -16,7 +16,7 @@ import {
   Heart, GraduationCap, Briefcase, Landmark, Users, User, Check,
   Star, ArrowRight, ArrowLeft, Play, Calendar, Clock, MapPin, Mail, Phone, MessageSquare,
   Send, Menu, X, ChevronDown, ChevronUp, ChevronRight, ChevronLeft,
-  Instagram, Twitter, Facebook, Linkedin,
+  Instagram, Twitter, Facebook, Linkedin, Youtube,
   ShoppingBag, Search,
   Sparkles, Moon, Sun, Eye, Crown, Zap, Palette, Smartphone, Puzzle,
   Mars, Venus, FileX, MessageCircle,

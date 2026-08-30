@@ -4,7 +4,7 @@
     <!-- Header -->
     <div class="om-header">
       <div>
-        <h3 class="om-title">{{ 'orderModal.title' | transloco }}</h3>
+        <h3 class="om-title">{{ displayTitle() }}</h3>
         <p class="om-sub">{{ 'orderModal.subtitle' | transloco }}</p>
       </div>
       <button class="om-close" type="button" (click)="close()">
@@ -40,13 +40,6 @@
             <label class="om-label">{{ 'orderModal.nameLabel' | transloco }}</label>
             <input type="text" class="om-input" [placeholder]="'orderModal.namePlaceholder' | transloco"
                    [(ngModel)]="name" name="name" autocomplete="name">
-          </div>
-
-          <!-- Email -->
-          <div class="om-field">
-            <label class="om-label">{{ 'orderModal.emailLabel' | transloco }}</label>
-            <input type="email" class="om-input" [placeholder]="'orderModal.emailPlaceholder' | transloco"
-                   [(ngModel)]="email" name="email" autocomplete="email" dir="ltr">
           </div>
 
           <!-- Phone -->

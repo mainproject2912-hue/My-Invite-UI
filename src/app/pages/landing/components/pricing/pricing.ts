@@ -1,9 +1,12 @@
 import { Component, signal, computed, inject, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
 import { TranslocoModule } from '@jsverse/transloco';
 import { ContentService } from '../../../../services/content.service';
 import { ScrollService } from '../../../../services/scroll.service';
+import { LanguageService } from '../../../../i18n/language.service';
+import { DesignOrderService } from '../../../../services/design-order.service';
 
 interface PricingTier {
   count: number;
@@ -23,13 +26,16 @@ interface PlanData {
 @Component({
   selector: 'app-pricing',
   standalone: true,
-  imports: [CommonModule, LucideAngularModule, TranslocoModule],
+  imports: [CommonModule, RouterModule, LucideAngularModule, TranslocoModule],
   templateUrl: './pricing.html',
   styleUrl: './pricing.css'
 })
 export class PricingComponent {
   private contentService = inject(ContentService);
+  private designOrderService = inject(DesignOrderService);
   readonly scrollService = inject(ScrollService);
+  private readonly languageService = inject(LanguageService);
+  readonly activeLanguage = this.languageService.activeLanguage;
 
   plans = computed<PlanData[]>(() => {
     const pkgs = this.contentService.packages();
@@ -88,5 +94,13 @@ export class PricingComponent {
 
   isSelected(planId: string, count: number) {
     return this.selectedCounts()[planId] === count;
+  }
+
+  orderPlan(plan: PlanData, event?: Event) {
+    if (event) event.preventDefault();
+    const tier = this.selectedTierFor(plan);
+    const countLabel = tier.count > 0 ? ` (${tier.count} دعوة)` : '';
+    const message = `أود طلب باقة "${plan.label}"${countLabel}.`;
+    this.designOrderService.openModalWithMessage(message, 'طلب الباقة');
   }
 }
