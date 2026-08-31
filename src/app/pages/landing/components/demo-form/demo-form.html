@@ -2,11 +2,6 @@
 
   <div class="container mx-auto px-5 relative z-10">
 
-    <!-- ===== SECTION HEADING ===== -->
-    <div class="demo-heading-wrap">
-      <h2 class="demo-heading font-display">{{ 'demoForm.heading' | transloco }}</h2>
-    </div>
-
     <!-- ===== TWO-COLUMN CARD ===== -->
     <div class="demo-card">
 
@@ -83,6 +78,15 @@
                 @for (et of eventTypes(); track et.id) {
                   <option [value]="et.name">{{ et.name }}</option>
                 }
+              </select>
+            </div>
+
+            <div>
+              <label class="demo-label">{{ 'demoForm.categoryLabel' | transloco }}</label>
+              <select class="demo-input" [(ngModel)]="category" name="category">
+                <option value="" selected>{{ 'demoForm.categoryPlaceholder' | transloco }}</option>
+                <option value="companies">{{ 'demoForm.categoryCompanies' | transloco }}</option>
+                <option value="individuals">{{ 'demoForm.categoryIndividuals' | transloco }}</option>
               </select>
             </div>
 

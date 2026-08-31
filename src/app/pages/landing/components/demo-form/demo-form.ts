@@ -50,6 +50,7 @@ export class DemoFormComponent {
   name = '';
   phoneLocal = '';
   eventType = '';
+  category = '';
   otp = '';
 
   get whatsAppNumber(): string {
@@ -69,7 +70,7 @@ export class DemoFormComponent {
     }
 
     this.loading.set(true);
-    this.demoService.sendOtp(this.name.trim(), this.whatsAppNumber, this.selectedCardId ?? undefined, this.eventType || undefined)
+    this.demoService.sendOtp(this.name.trim(), this.whatsAppNumber, this.selectedCardId ?? undefined, this.eventType || undefined, this.category || undefined)
       .subscribe({
         next: () => {
           this.loading.set(false);

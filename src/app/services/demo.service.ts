@@ -8,12 +8,13 @@ export class DemoService {
   private http = inject(HttpClient);
   private apiUrl = `${environment.apiUrl}/demo`;
 
-  sendOtp(name: string, whatsAppNumber: string, invitationCardId?: number, eventType?: string): Observable<{ message: string }> {
+  sendOtp(name: string, whatsAppNumber: string, invitationCardId?: number, eventType?: string, category?: string): Observable<{ message: string }> {
     return this.http.post<{ message: string }>(`${this.apiUrl}/send-otp`, {
       name,
       whatsAppNumber,
       invitationCardId: invitationCardId ?? null,
-      eventType: eventType || null
+      eventType: eventType || null,
+      category: category || null
     });
   }
 
