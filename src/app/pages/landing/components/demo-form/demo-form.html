@@ -83,11 +83,24 @@
 
             <div>
               <label class="demo-label">{{ 'demoForm.categoryLabel' | transloco }}</label>
-              <select class="demo-input" [(ngModel)]="category" name="category">
-                <option value="" selected>{{ 'demoForm.categoryPlaceholder' | transloco }}</option>
-                <option value="companies">{{ 'demoForm.categoryCompanies' | transloco }}</option>
-                <option value="individuals">{{ 'demoForm.categoryIndividuals' | transloco }}</option>
-              </select>
+              <div class="demo-category-toggle">
+                <button 
+                  type="button" 
+                  class="demo-cat-btn" 
+                  [class.active]="category === 'individual' || category === 'individuals'" 
+                  (click)="category = 'individual'">
+                  <lucide-icon name="user" class="demo-cat-icon"></lucide-icon>
+                  <span>{{ 'demoForm.categoryIndividuals' | transloco }}</span>
+                </button>
+                <button 
+                  type="button" 
+                  class="demo-cat-btn" 
+                  [class.active]="category === 'company' || category === 'companies'" 
+                  (click)="category = 'company'">
+                  <lucide-icon name="building-2" class="demo-cat-icon"></lucide-icon>
+                  <span>{{ 'demoForm.categoryCompanies' | transloco }}</span>
+                </button>
+              </div>
             </div>
 
             @if (selectedCardId) {
