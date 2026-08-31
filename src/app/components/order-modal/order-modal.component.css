@@ -10,6 +10,7 @@
   align-items: center;
   justify-content: center;
   padding: 16px;
+  overflow-y: auto;
   animation: omFadeIn 0.2s ease;
 }
 
@@ -25,6 +26,8 @@
   width: 100%;
   max-width: 520px;
   max-height: 90vh;
+  max-height: 90dvh;
+  margin: auto;
   overflow-y: auto;
   box-shadow: 0 24px 80px var(--shadow);
   animation: omSlideUp 0.25s ease;
@@ -300,5 +303,7 @@
 [dir="rtl"] lucide-icon[name="send"] { transform: scaleX(-1); }
 
 @media (max-width: 480px) {
+  .om-backdrop { padding: 12px; }
+  .om-box { max-height: calc(100dvh - 24px); border-radius: 16px; }
   .om-header, .om-body { padding-inline: 18px; }
 }

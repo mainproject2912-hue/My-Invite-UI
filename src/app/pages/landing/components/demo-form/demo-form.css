@@ -381,6 +381,9 @@
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .demo-section { padding: 60px 0 80px; }
+  .demo-card {
+    grid-template-columns: 1fr;
+  }
   .demo-text-panel {
     padding: 32px 24px;
     border-inline-end: none;
@@ -393,16 +396,17 @@
 }
 
 @media (max-width: 640px) {
+  .demo-section { padding: 40px 0 60px; }
   .demo-card {
     width: 100%;
     margin: 0 auto;
-    border-radius: var(--radius-card);
+    border-radius: var(--radius-card, 16px);
   }
   .demo-form-panel {
-    padding: 24px 16px;
+    padding: 24px 18px;
   }
   .demo-text-panel {
-    padding: 24px 16px;
+    padding: 24px 18px;
   }
   .demo-phone-row {
     gap: 6px;
