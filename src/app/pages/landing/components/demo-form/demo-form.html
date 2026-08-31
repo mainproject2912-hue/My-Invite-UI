@@ -81,28 +81,6 @@
               </select>
             </div>
 
-            <div>
-              <label class="demo-label">{{ 'demoForm.categoryLabel' | transloco }}</label>
-              <div class="demo-category-toggle">
-                <button 
-                  type="button" 
-                  class="demo-cat-btn" 
-                  [class.active]="category === 'individual' || category === 'individuals'" 
-                  (click)="category = 'individual'">
-                  <lucide-icon name="user" class="demo-cat-icon"></lucide-icon>
-                  <span>{{ 'demoForm.categoryIndividuals' | transloco }}</span>
-                </button>
-                <button 
-                  type="button" 
-                  class="demo-cat-btn" 
-                  [class.active]="category === 'company' || category === 'companies'" 
-                  (click)="category = 'company'">
-                  <lucide-icon name="building-2" class="demo-cat-icon"></lucide-icon>
-                  <span>{{ 'demoForm.categoryCompanies' | transloco }}</span>
-                </button>
-              </div>
-            </div>
-
             @if (selectedCardId) {
               <p class="demo-note">
                 {{ 'demoForm.cardSelectedNote' | transloco }}

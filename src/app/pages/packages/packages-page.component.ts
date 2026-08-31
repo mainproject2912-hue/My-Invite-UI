@@ -130,7 +130,7 @@ export class PackagesPageComponent implements OnInit {
 
   orderPackage(pkg: ProcessedPackage) {
     const tier = this.selectedTierFor(pkg);
-    const countLabel = tier.count > 0 ? ` (${tier.count} دعوة)` : '';
+    const countLabel = tier.count > 0 ? ` (${tier.count} دعوة - السعر: ${tier.price} ر.س)` : '';
     const message = `أود طلب باقة "${pkg.name}"${countLabel}.`;
     this.designOrderService.openModalWithMessage(message, 'طلب الباقة');
   }

@@ -99,7 +99,7 @@ export class PricingComponent {
   orderPlan(plan: PlanData, event?: Event) {
     if (event) event.preventDefault();
     const tier = this.selectedTierFor(plan);
-    const countLabel = tier.count > 0 ? ` (${tier.count} دعوة)` : '';
+    const countLabel = tier.count > 0 ? ` (${tier.count} دعوة - السعر: ${tier.price} ر.س)` : '';
     const message = `أود طلب باقة "${plan.label}"${countLabel}.`;
     this.designOrderService.openModalWithMessage(message, 'طلب الباقة');
   }
