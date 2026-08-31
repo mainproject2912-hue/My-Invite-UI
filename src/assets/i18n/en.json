@@ -7,6 +7,7 @@
     "home": "Home",
     "designs": "Designs",
     "solutions": "Solutions",
+    "categoriesTitle": "Solutions",
     "additionalServices": "Our Features",
     "howItWorks": "How It Works",
     "demo": "Try It Free",
@@ -61,9 +62,10 @@
     "cta2": "View Designs",
     "mockPlaceholder": "Drop a card design shot here",
     "trust": {
-      "events": { "value": "500+", "label": "Successful Events" },
-      "countries": { "value": "3", "label": "Countries" },
-      "support": { "value": "24/7", "label": "Full Support" }
+      "invitations": { "value": "+10,000", "label": "Invitations Sent" },
+      "clients": { "value": "+5,000", "label": "Happy Clients" },
+      "designs": { "value": "Exclusive Designs", "label": "Unique & Distinctive" },
+      "support": { "value": "Continuous Support", "label": "Before & After Your Order" }
     },
     "badges": {
       "b0": "Scan Entry Codes",
@@ -92,6 +94,15 @@
     "kicker": "We serve every occasion",
     "title": "Whatever your occasion... it deserves an invitation worthy of it",
     "description": "From wedding parties to corporate conferences, we design, send, and manage attendance with the same professionalism.",
+    "categories": {
+      "c0": "Weddings",
+      "c1": "Engagements",
+      "c2": "Graduations",
+      "c3": "Newborns",
+      "c4": "Birthdays",
+      "c5": "Companies",
+      "c6": "Other Occasions"
+    },
     "item0": {
       "title": "Wedding Parties",
       "body": "An invitation worthy of the night of a lifetime, with a design reflecting your taste and organization that gives you peace of mind."
@@ -314,7 +325,10 @@
     "step4Title": "Launch and Delivery",
     "step4Body": "Once you approve, we launch your invitation and deliver it to your guests through the right channels, tracking every invitation's status and RSVPs as they come in.",
     "step5Title": "With You Until the Last Moment",
-    "step5Body": "Before and during your occasion, follow your guests' attendance and your invitation's results moment by moment through your own dashboard, with our team on hand to support you with any update you need for your occasion to go smoothly."
+    "step5Body": "Before and during your occasion, follow your guests' attendance and your invitation's results moment by moment through your own dashboard, with our team on hand to support you with any update you need for your occasion to go smoothly.",
+    "stepTag": "Step {{number}}",
+    "zoomLabel": "Zoom In",
+    "closeLabel": "Close"
   },
   "demoForm": {
     "heading": "Try your invitation before deciding",
@@ -363,7 +377,8 @@
     "ctaOrderNow": "Order Now",
     "ctaContactUs": "Contact Us",
     "currency": "SAR",
-    "popularBadge": "MOST POPULAR"
+    "popularBadge": "MOST POPULAR",
+    "viewAllPackages": "View All Packages"
   },
   "platformFeatures": {
     "kicker": "App Features",
@@ -451,18 +466,28 @@
     }
   },
   "designsPage": {
-    "heading": "",
-    "subtitle": "",
-    "genderFilterAll": "",
-    "genderFilterMale": "",
-    "genderFilterFemale": "",
-    "newBadge": "",
-    "quickPreview": "",
-    "details": "",
-    "emptyTitle": "",
-    "emptySubtitle": "",
-    "lightboxCode": "",
-    "lightboxOrder": ""
+    "heading": "Explore <span>All Designs</span>",
+    "subtitle": "Browse our wide collection of exclusive designs for every occasion",
+    "genderFilterAll": "All Designs",
+    "genderFilterMale": "Men's Designs",
+    "genderFilterFemale": "Women's Designs",
+    "newBadge": "New",
+    "quickPreview": "Quick Preview",
+    "details": "Details",
+    "emptyTitle": "No designs in this category",
+    "emptySubtitle": "Try a different filter",
+    "lightboxCode": "Code",
+    "lightboxOrder": "Order This Design"
+  },
+  "packagesPage": {
+    "heroBadge": "Transparent Pricing & Packages For Every Occasion",
+    "heroTitle": "All Digital Invitation & Attendance Management Packages",
+    "heroSubtitle": "Choose the package that best fits your occasion and enjoy smart invitation sending, instant RSVP confirmation, and effortless, elegant guest reception management.",
+    "loadingText": "Loading packages...",
+    "includesPrefix": "Includes",
+    "featuresTitle": "Features & Services Included:",
+    "addonsTitle": "Custom Add-ons & Services",
+    "addonsSubtitle": "You can add any extra services to your package based on your event's needs"
   },
   "blogPage": {
     "label": "Blog",

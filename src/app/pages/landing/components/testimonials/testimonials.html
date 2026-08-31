@@ -9,7 +9,7 @@
     @if (testimonials().length > 0) {
       <div class="testimonials-grid">
         @for (t of testimonials(); track t.id) {
-          <div class="testimonial-card sc-hover-card">
+          <div class="testimonial-card sc-hover-card" dir="rtl">
             <div class="testimonial-stars">
               @for (s of stars; track s) {
                 <svg

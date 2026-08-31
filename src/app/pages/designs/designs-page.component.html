@@ -3,22 +3,25 @@
   <app-order-modal></app-order-modal>
 }
 
-<section id="designs-page" class="designs-page-section" dir="rtl">
+<section id="designs-page" class="designs-page-section">
   <div class="container mx-auto px-5 py-16">
 
     <!-- Page Header -->
     <div class="text-center mb-12">
-      <h1 class="section-title mt-4">
-        استكشف <span>جميع التصاميم</span>
-      </h1>
+      <h1 class="section-title mt-4" [innerHTML]="'designsPage.heading' | transloco"></h1>
       <p class="section-sub mt-4">
-        تصفح مجموعتنا الواسعة من التصاميم الحصرية لكل مناسبة
+        {{ 'designsPage.subtitle' | transloco }}
       </p>
     </div>
 
     <!-- Category Filter -->
     <div class="designs-filter-wrap mb-5">
       <div class="designs-filter justify-center">
+        <button
+          class="tag-pill"
+          [class.active]="activeCategory() === null"
+          (click)="activeCategory.set(null)"
+        >{{ 'portfolioSlider.categoryAll' | transloco }}</button>
         @for (cat of categories(); track cat) {
           <button
             class="tag-pill"
@@ -31,13 +34,21 @@
 
     <!-- Gender Filter -->
     <div class="flex justify-center gap-3 mb-10 flex-wrap">
-      @for (g of ['كل التصميمات', 'تصميمات ذكورية', 'تصميمات أنثوية']; track g) {
-        <button
-          class="tag-pill"
-          [class.active]="activeGender() === g"
-          (click)="activeGender.set(g)"
-        >{{ g }}</button>
-      }
+      <button
+        class="tag-pill"
+        [class.active]="activeGender() === 'all'"
+        (click)="activeGender.set('all')"
+      >{{ 'designsPage.genderFilterAll' | transloco }}</button>
+      <button
+        class="tag-pill"
+        [class.active]="activeGender() === 'male'"
+        (click)="activeGender.set('male')"
+      >{{ 'designsPage.genderFilterMale' | transloco }}</button>
+      <button
+        class="tag-pill"
+        [class.active]="activeGender() === 'female'"
+        (click)="activeGender.set('female')"
+      >{{ 'designsPage.genderFilterFemale' | transloco }}</button>
     </div>
 
     <!-- Loading Skeleton -->
@@ -63,7 +74,7 @@
             <!-- Image -->
             <div class="design-card-image">
               @if (card.isNew) {
-                <span class="design-badge-new">جديد</span>
+                <span class="design-badge-new">{{ 'designsPage.newBadge' | transloco }}</span>
               }
               @if (card.gender) {
                 <span class="design-badge-gender" [class.male]="card.gender === 'ذكوري'">
@@ -76,7 +87,7 @@
               <div class="design-overlay">
                 <button class="design-overlay-btn" (click)="$event.stopPropagation(); openPreview(card)">
                   <lucide-icon name="eye" class="w-4 h-4"></lucide-icon>
-                  معاينة سريعة
+                  {{ 'designsPage.quickPreview' | transloco }}
                 </button>
               </div>
             </div>
@@ -89,7 +100,7 @@
                 <span class="design-card-price">#{{ card.id }}</span>
                 <button class="design-card-cta" (click)="$event.stopPropagation(); openPreview(card)">
                   <lucide-icon name="eye" class="w-3 h-3"></lucide-icon>
-                  تفاصيل
+                  {{ 'designsPage.details' | transloco }}
                 </button>
               </div>
             </div>
@@ -102,8 +113,8 @@
       @if (filtered().length === 0) {
         <div class="text-center py-20">
           <lucide-icon name="search" class="w-16 h-16 mx-auto mb-4" style="color: var(--text-muted);"></lucide-icon>
-          <p class="text-lg font-semibold" style="color: var(--text-muted);">لا توجد تصاميم في هذا القسم</p>
-          <p class="text-sm mt-2" style="color: var(--text-muted);">جرّب تصفية مختلفة</p>
+          <p class="text-lg font-semibold" style="color: var(--text-muted);">{{ 'designsPage.emptyTitle' | transloco }}</p>
+          <p class="text-sm mt-2" style="color: var(--text-muted);">{{ 'designsPage.emptySubtitle' | transloco }}</p>
         </div>
       }
     }
@@ -126,7 +137,7 @@
 
         <div class="lightbox-img-wrap">
           @if (previewCard()!.isNew) {
-            <span class="lb-badge-new">جديد</span>
+            <span class="lb-badge-new">{{ 'designsPage.newBadge' | transloco }}</span>
           }
           <img [src]="previewCard()!.imageUrl" [alt]="previewCard()!.title" class="lightbox-img">
         </div>
@@ -145,7 +156,7 @@
           <div class="lb-divider"></div>
 
           <div class="lb-price-row">
-            <span class="lb-price-label">الكود</span>
+            <span class="lb-price-label">{{ 'designsPage.lightboxCode' | transloco }}</span>
             <span class="lb-price-value">#{{ previewCard()!.id }}</span>
           </div>
 
@@ -153,7 +164,7 @@
 
           <button class="lb-cta" (click)="orderDesign(previewCard()!)">
             <lucide-icon name="send" class="w-4 h-4"></lucide-icon>
-            اطلب هذا التصميم
+            {{ 'designsPage.lightboxOrder' | transloco }}
           </button>
         </div>
 

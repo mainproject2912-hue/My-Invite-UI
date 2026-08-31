@@ -16,15 +16,15 @@
 
       <span class="packages-hero-badge">
         <lucide-icon name="sparkles" class="w-4 h-4"></lucide-icon>
-        أسعار وباقات شفافة لمختلف المناسبات
+        {{ 'packagesPage.heroBadge' | transloco }}
       </span>
 
       <h1 class="packages-page-title font-display">
-        جميع باقات الدعوات الرقمية وإدارة الحضور
+        {{ 'packagesPage.heroTitle' | transloco }}
       </h1>
 
       <p class="packages-page-subtitle">
-        اختر الباقة الأنسب لمناسبتك واستمتع بتجربة إرسال الدعوات الذكية، تأكيد الحضور الفوري، وإدارة استقبال الضيوف بكل سهولة ورقي.
+        {{ 'packagesPage.heroSubtitle' | transloco }}
       </p>
     </div>
   </section>
@@ -36,7 +36,7 @@
       @if (packagesList().length === 0) {
         <div class="loading-box text-center py-20">
           <div class="spinner border-4 border-gold border-t-transparent rounded-full w-12 h-12 mx-auto animate-spin mb-4"></div>
-          <p class="text-slate-400">جاري تحميل الباقات...</p>
+          <p class="text-slate-400">{{ 'packagesPage.loadingText' | transloco }}</p>
         </div>
       } @else {
         <div class="packages-grid">
@@ -65,7 +65,7 @@
                 </div>
                 @if (selectedTierFor(plan).count > 0) {
                   <p class="price-sublabel">
-                    يشمل {{ selectedTierFor(plan).count }} {{ 'pricing.guestsUnit' | transloco }}
+                    {{ 'packagesPage.includesPrefix' | transloco }} {{ selectedTierFor(plan).count }} {{ 'pricing.guestsUnit' | transloco }}
                   </p>
                 }
               </div>
@@ -104,7 +104,7 @@
 
               <!-- Full Features List -->
               <div class="package-features-block">
-                <h3 class="features-title">المميزات والخدمات المشمولة:</h3>
+                <h3 class="features-title">{{ 'packagesPage.featuresTitle' | transloco }}</h3>
                 <ul class="features-list">
                   @for (feat of plan.features; track feat) {
                     <li>
@@ -131,8 +131,8 @@
       <!-- Extra Add-ons Section -->
       <section class="addons-page-section mt-20">
         <div class="addons-header text-center mb-10">
-          <h2 class="addons-main-title font-display">إضافات وخدمات مخصصة</h2>
-          <p class="addons-subtitle">يمكنك إضافة أية خدمات إضافية لباقاتك حسب احتياج مناسبتك</p>
+          <h2 class="addons-main-title font-display">{{ 'packagesPage.addonsTitle' | transloco }}</h2>
+          <p class="addons-subtitle">{{ 'packagesPage.addonsSubtitle' | transloco }}</p>
         </div>
 
         <div class="addons-grid-full">

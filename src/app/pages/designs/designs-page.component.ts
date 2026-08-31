@@ -1,5 +1,6 @@
 import { Component, signal, computed, inject, OnInit } from '@angular/core';
 import { LucideAngularModule } from 'lucide-angular';
+import { TranslocoModule } from '@jsverse/transloco';
 import { NavbarComponent } from '../../components/navbar/navbar';
 import { FooterComponent } from '../../components/footer/footer';
 import { ContentService } from '../../services/content.service';
@@ -11,7 +12,7 @@ import { InvitationCard } from '../../models/content.interface';
 @Component({
   selector: 'app-designs-page',
   standalone: true,
-  imports: [LucideAngularModule, NavbarComponent, FooterComponent, OrderModalComponent],
+  imports: [LucideAngularModule, TranslocoModule, NavbarComponent, FooterComponent, OrderModalComponent],
   templateUrl: './designs-page.component.html',
   styleUrl: './designs-page.component.css'
 })
@@ -22,24 +23,21 @@ export class DesignsPageComponent implements OnInit {
 
   showOrderModal = this.designOrderService.showModal;
 
-  activeCategory = signal('كل التصميمات');
-  activeGender = signal('كل التصميمات');
+  activeCategory = signal<string | null>(null);
+  activeGender = signal<'all' | 'male' | 'female'>('all');
   previewCard = signal<InvitationCard | null>(null);
 
   invitations = this.contentService.invitations;
   eventTypes = this.contentService.eventTypes;
 
-  categories = computed(() => {
-    const names = this.eventTypes().map(e => e.name);
-    return ['كل التصميمات', ...names];
-  });
+  categories = computed(() => this.eventTypes().map(e => e.name));
 
   filtered = computed(() => {
     const cat = this.activeCategory();
     const gender = this.activeGender();
     let items = this.invitations();
 
-    if (cat && cat !== 'كل التصميمات') {
+    if (cat) {
       const searchCat = cat.trim();
       items = items.filter(i =>
         (i.category && i.category.trim() === searchCat) ||
@@ -47,9 +45,9 @@ export class DesignsPageComponent implements OnInit {
       );
     }
 
-    if (gender === 'تصميمات ذكورية') {
+    if (gender === 'male') {
       items = items.filter(i => i.gender === 'ذكوري');
-    } else if (gender === 'تصميمات أنثوية') {
+    } else if (gender === 'female') {
       items = items.filter(i => i.gender === 'أنثوي');
     }
 
