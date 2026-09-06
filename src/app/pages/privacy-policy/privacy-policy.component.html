@@ -20,171 +20,90 @@
 
       <p class="policy-update-date">{{ 'privacyPolicy.updateDate' | transloco }}</p>
 
+      <p class="policy-intro">{{ 'privacyPolicy.intro' | transloco: { siteName: siteName() } }}</p>
+
       <section class="policy-section">
-        <h2>{{ 'privacyPolicy.intro.title' | transloco }}</h2>
-        <p>{{ 'privacyPolicy.intro.p1' | transloco: { siteName: siteName() } }}</p>
-        <p>{{ 'privacyPolicy.intro.p2' | transloco: { siteName: siteName() } }}</p>
-        <p>{{ 'privacyPolicy.intro.p3' | transloco: { siteName: siteName() } }}</p>
+        <h2>{{ 'privacyPolicy.section1.title' | transloco }}</h2>
+        <p>{{ 'privacyPolicy.section1.intro' | transloco }}</p>
+        <ul>
+          <li>{{ 'privacyPolicy.section1.item1' | transloco }}</li>
+          <li>{{ 'privacyPolicy.section1.item2' | transloco }}</li>
+          <li>{{ 'privacyPolicy.section1.item3' | transloco }}</li>
+          <li>{{ 'privacyPolicy.section1.item4' | transloco }}</li>
+          <li>{{ 'privacyPolicy.section1.item5' | transloco }}</li>
+          <li>{{ 'privacyPolicy.section1.item6' | transloco }}</li>
+        </ul>
+        <p>{{ 'privacyPolicy.section1.note' | transloco }}</p>
       </section>
 
       <section class="policy-section">
-        <h2>{{ 'privacyPolicy.scope.title' | transloco }}</h2>
-        <p>{{ 'privacyPolicy.scope.p1' | transloco: { siteName: siteName() } }}</p>
+        <h2>{{ 'privacyPolicy.section2.title' | transloco }}</h2>
+        <p>{{ 'privacyPolicy.section2.intro' | transloco: { siteName: siteName() } }}</p>
         <ul>
-          <li>{{ 'privacyPolicy.scope.item1' | transloco }}</li>
-          <li>{{ 'privacyPolicy.scope.item2' | transloco }}</li>
-          <li>{{ 'privacyPolicy.scope.item3' | transloco }}</li>
-          <li>{{ 'privacyPolicy.scope.item4' | transloco }}</li>
-          <li>{{ 'privacyPolicy.scope.item5' | transloco }}</li>
-          <li>{{ 'privacyPolicy.scope.item6' | transloco: { siteName: siteName() } }}</li>
+          <li>{{ 'privacyPolicy.section2.item1' | transloco }}</li>
+          <li>{{ 'privacyPolicy.section2.item2' | transloco }}</li>
+          <li>{{ 'privacyPolicy.section2.item3' | transloco }}</li>
+          <li>{{ 'privacyPolicy.section2.item4' | transloco }}</li>
+          <li>{{ 'privacyPolicy.section2.item5' | transloco }}</li>
+          <li>{{ 'privacyPolicy.section2.item6' | transloco }}</li>
+          <li>{{ 'privacyPolicy.section2.item7' | transloco }}</li>
         </ul>
       </section>
 
       <section class="policy-section">
-        <h2>{{ 'privacyPolicy.definitions.title' | transloco }}</h2>
-        <p>{{ 'privacyPolicy.definitions.p1' | transloco }}</p>
+        <h2>{{ 'privacyPolicy.section3.title' | transloco }}</h2>
+        <p>{{ 'privacyPolicy.section3.p1' | transloco }}</p>
+        <p>{{ 'privacyPolicy.section3.p2' | transloco }}</p>
+        <p>{{ 'privacyPolicy.section3.p3' | transloco }}</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>{{ 'privacyPolicy.section4.title' | transloco }}</h2>
+        <p>{{ 'privacyPolicy.section4.p1' | transloco }}</p>
+        <p>{{ 'privacyPolicy.section4.p2' | transloco }}</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>{{ 'privacyPolicy.section5.title' | transloco }}</h2>
+        <p>{{ 'privacyPolicy.section5.p1' | transloco }}</p>
+        <p>{{ 'privacyPolicy.section5.p2' | transloco }}</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>{{ 'privacyPolicy.section6.title' | transloco }}</h2>
+        <p>{{ 'privacyPolicy.section6.p1' | transloco }}</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>{{ 'privacyPolicy.section7.title' | transloco }}</h2>
+        <p>{{ 'privacyPolicy.section7.intro' | transloco }}</p>
         <ul>
-          <li><strong>{{ 'privacyPolicy.definitions.term1' | transloco }}</strong> {{ 'privacyPolicy.definitions.def1' | transloco }}</li>
-          <li><strong>{{ 'privacyPolicy.definitions.term2' | transloco }}</strong> {{ 'privacyPolicy.definitions.def2' | transloco }}</li>
-          <li><strong>{{ 'privacyPolicy.definitions.term3' | transloco }}</strong> {{ 'privacyPolicy.definitions.def3' | transloco: { siteName: siteName() } }}</li>
-          <li><strong>{{ 'privacyPolicy.definitions.term4' | transloco }}</strong> {{ 'privacyPolicy.definitions.def4' | transloco: { siteName: siteName() } }}</li>
-          <li><strong>{{ 'privacyPolicy.definitions.term5' | transloco }}</strong> {{ 'privacyPolicy.definitions.def5' | transloco }}</li>
+          <li>{{ 'privacyPolicy.section7.item1' | transloco }}</li>
+          <li>{{ 'privacyPolicy.section7.item2' | transloco }}</li>
+          <li>{{ 'privacyPolicy.section7.item3' | transloco }}</li>
+          <li>{{ 'privacyPolicy.section7.item4' | transloco }}</li>
+          <li>{{ 'privacyPolicy.section7.item5' | transloco }}</li>
         </ul>
+        <p>{{ 'privacyPolicy.section7.note' | transloco }}</p>
       </section>
 
       <section class="policy-section">
-        <h2>{{ 'privacyPolicy.purpose.title' | transloco }}</h2>
-        <p>{{ 'privacyPolicy.purpose.p1' | transloco: { siteName: siteName() } }}</p>
-
-        <div class="policy-purpose-grid">
-          <div class="purpose-card">
-            <h3>{{ 'privacyPolicy.purpose.card1Title' | transloco }}</h3>
-            <p>{{ 'privacyPolicy.purpose.card1Body' | transloco }}</p>
-          </div>
-          <div class="purpose-card">
-            <h3>{{ 'privacyPolicy.purpose.card2Title' | transloco }}</h3>
-            <p>{{ 'privacyPolicy.purpose.card2Body' | transloco }}</p>
-          </div>
-          <div class="purpose-card">
-            <h3>{{ 'privacyPolicy.purpose.card3Title' | transloco }}</h3>
-            <p>{{ 'privacyPolicy.purpose.card3Body' | transloco }}</p>
-          </div>
-          <div class="purpose-card">
-            <h3>{{ 'privacyPolicy.purpose.card4Title' | transloco }}</h3>
-            <p>{{ 'privacyPolicy.purpose.card4Body' | transloco: { siteName: siteName() } }}</p>
-          </div>
-          <div class="purpose-card">
-            <h3>{{ 'privacyPolicy.purpose.card5Title' | transloco }}</h3>
-            <p>{{ 'privacyPolicy.purpose.card5Body' | transloco }}</p>
-          </div>
-          <div class="purpose-card">
-            <h3>{{ 'privacyPolicy.purpose.card6Title' | transloco }}</h3>
-            <p>{{ 'privacyPolicy.purpose.card6Body' | transloco }}</p>
-          </div>
-        </div>
+        <h2>{{ 'privacyPolicy.section8.title' | transloco }}</h2>
+        <p>{{ 'privacyPolicy.section8.p1' | transloco }}</p>
+        <p>{{ 'privacyPolicy.section8.p2' | transloco }}</p>
       </section>
 
       <section class="policy-section">
-        <h2>{{ 'privacyPolicy.dataTypes.title' | transloco: { siteName: siteName() } }}</h2>
+        <h2>{{ 'privacyPolicy.section9.title' | transloco }}</h2>
+        <p>{{ 'privacyPolicy.section9.intro' | transloco }}</p>
         <ul>
-          <li><strong>{{ 'privacyPolicy.dataTypes.term1' | transloco }}</strong> {{ 'privacyPolicy.dataTypes.def1' | transloco }}</li>
-          <li><strong>{{ 'privacyPolicy.dataTypes.term2' | transloco }}</strong> {{ 'privacyPolicy.dataTypes.def2' | transloco }}</li>
-          <li><strong>{{ 'privacyPolicy.dataTypes.term3' | transloco }}</strong> {{ 'privacyPolicy.dataTypes.def3' | transloco }}</li>
-          <li><strong>{{ 'privacyPolicy.dataTypes.term4' | transloco }}</strong> {{ 'privacyPolicy.dataTypes.def4' | transloco }}</li>
-          <li><strong>{{ 'privacyPolicy.dataTypes.term5' | transloco }}</strong> {{ 'privacyPolicy.dataTypes.def5' | transloco }}</li>
-          <li><strong>{{ 'privacyPolicy.dataTypes.term6' | transloco }}</strong> {{ 'privacyPolicy.dataTypes.def6' | transloco: { siteName: siteName() } }}</li>
+          @if (contactEmail()) {
+            <li>{{ 'privacyPolicy.section9.emailLabel' | transloco }} <span dir="ltr">{{ contactEmail() }}</span></li>
+          }
+          @if (contactPhone()) {
+            <li>{{ 'privacyPolicy.section9.phoneLabel' | transloco }} <span dir="ltr">{{ contactPhone() }}</span></li>
+          }
         </ul>
-      </section>
-
-      <section class="policy-section">
-        <h2>{{ 'privacyPolicy.sharing.title' | transloco }}</h2>
-        <p>{{ 'privacyPolicy.sharing.p1' | transloco: { siteName: siteName() } }}</p>
-        <ul>
-          <li><strong>{{ 'privacyPolicy.sharing.term1' | transloco }}</strong> {{ 'privacyPolicy.sharing.def1' | transloco }}</li>
-          <li><strong>{{ 'privacyPolicy.sharing.term2' | transloco }}</strong> {{ 'privacyPolicy.sharing.def2' | transloco }}</li>
-          <li><strong>{{ 'privacyPolicy.sharing.term3' | transloco }}</strong> {{ 'privacyPolicy.sharing.def3' | transloco }}</li>
-        </ul>
-      </section>
-
-      <section class="policy-section">
-        <h2>{{ 'privacyPolicy.protection.title' | transloco }}</h2>
-        <p>{{ 'privacyPolicy.protection.p1' | transloco: { siteName: siteName() } }}</p>
-        <ul>
-          <li>{{ 'privacyPolicy.protection.item1' | transloco }}</li>
-          <li>{{ 'privacyPolicy.protection.item2' | transloco }}</li>
-          <li>{{ 'privacyPolicy.protection.item3' | transloco }}</li>
-          <li>{{ 'privacyPolicy.protection.item4' | transloco }}</li>
-        </ul>
-      </section>
-
-      <section class="policy-section">
-        <h2>{{ 'privacyPolicy.rights.title' | transloco }}</h2>
-        <p>{{ 'privacyPolicy.rights.p1' | transloco: { siteName: siteName() } }}</p>
-        <div class="rights-grid">
-          <div class="right-item">
-            <span class="right-icon">{{ 'privacyPolicy.rights.right1Icon' | transloco }}</span>
-            <div>
-              <strong>{{ 'privacyPolicy.rights.right1Title' | transloco }}</strong>
-              <p>{{ 'privacyPolicy.rights.right1Body' | transloco }}</p>
-            </div>
-          </div>
-          <div class="right-item">
-            <span class="right-icon">{{ 'privacyPolicy.rights.right2Icon' | transloco }}</span>
-            <div>
-              <strong>{{ 'privacyPolicy.rights.right2Title' | transloco }}</strong>
-              <p>{{ 'privacyPolicy.rights.right2Body' | transloco }}</p>
-            </div>
-          </div>
-          <div class="right-item">
-            <span class="right-icon">{{ 'privacyPolicy.rights.right3Icon' | transloco }}</span>
-            <div>
-              <strong>{{ 'privacyPolicy.rights.right3Title' | transloco }}</strong>
-              <p>{{ 'privacyPolicy.rights.right3Body' | transloco }}</p>
-            </div>
-          </div>
-          <div class="right-item">
-            <span class="right-icon">{{ 'privacyPolicy.rights.right4Icon' | transloco }}</span>
-            <div>
-              <strong>{{ 'privacyPolicy.rights.right4Title' | transloco }}</strong>
-              <p>{{ 'privacyPolicy.rights.right4Body' | transloco }}</p>
-            </div>
-          </div>
-          <div class="right-item">
-            <span class="right-icon">{{ 'privacyPolicy.rights.right5Icon' | transloco }}</span>
-            <div>
-              <strong>{{ 'privacyPolicy.rights.right5Title' | transloco }}</strong>
-              <p>{{ 'privacyPolicy.rights.right5Body' | transloco }}</p>
-            </div>
-          </div>
-          <div class="right-item">
-            <span class="right-icon">{{ 'privacyPolicy.rights.right6Icon' | transloco }}</span>
-            <div>
-              <strong>{{ 'privacyPolicy.rights.right6Title' | transloco }}</strong>
-              <p>{{ 'privacyPolicy.rights.right6Body' | transloco }}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="policy-section">
-        <h2>{{ 'privacyPolicy.retention.title' | transloco }}</h2>
-        <p>{{ 'privacyPolicy.retention.p1' | transloco: { siteName: siteName() } }}</p>
-      </section>
-
-      <section class="policy-section">
-        <h2>{{ 'privacyPolicy.general.title' | transloco }}</h2>
-        <div class="general-item">
-          <h3>{{ 'privacyPolicy.general.item1Title' | transloco }}</h3>
-          <p>{{ 'privacyPolicy.general.item1Body' | transloco: { siteName: siteName() } }}</p>
-        </div>
-        <div class="general-item">
-          <h3>{{ 'privacyPolicy.general.item2Title' | transloco }}</h3>
-          <p>{{ 'privacyPolicy.general.item2Body' | transloco: { siteName: siteName() } }}</p>
-        </div>
-        <div class="general-item">
-          <h3>{{ 'privacyPolicy.general.item3Title' | transloco }}</h3>
-          <p>{{ 'privacyPolicy.general.item3Body' | transloco }}</p>
-        </div>
       </section>
 
     </div>

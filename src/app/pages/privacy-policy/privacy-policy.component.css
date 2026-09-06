@@ -44,16 +44,23 @@
 .policy-update-date {
   font-size: 13px;
   color: var(--gold);
-  margin-bottom: 40px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid rgba(184,135,59,0.12);
+  margin-bottom: 20px;
   font-weight: 600;
+}
+
+.policy-intro {
+  color: var(--text, rgba(255,255,255,0.75));
+  line-height: 2;
+  font-size: 15px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 /* Sections */
 .policy-section {
-  margin-bottom: 44px;
-  padding-bottom: 44px;
+  margin-bottom: 36px;
+  padding-bottom: 36px;
   border-bottom: 1px solid var(--border-subtle);
 }
 .policy-section:last-child {
@@ -62,10 +69,10 @@
   border-bottom: none;
 }
 .policy-section h2 {
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: var(--text);
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   padding-inline-start: 14px;
   border-inline-start: 3px solid var(--gold);
 }
@@ -75,13 +82,16 @@
   font-size: 15px;
   margin-bottom: 12px;
 }
+.policy-section p:last-child {
+  margin-bottom: 0;
+}
 .policy-section ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 12px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 .policy-section ul li {
   color: var(--text, rgba(255,255,255,0.75));
@@ -100,89 +110,7 @@
   border-radius: 50%;
   background: var(--gold);
 }
-.policy-section ul li strong {
-  color: var(--text);
-}
 
-/* Purpose Grid */
-.policy-purpose-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 16px;
-  margin-top: 20px;
-}
-.purpose-card {
-  background: rgba(184,135,59,0.04);
-  border: 1px solid rgba(184,135,59,0.12);
-  border-radius: var(--radius-card);
-  padding: 20px;
-}
-.purpose-card h3 {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--gold);
-  margin-bottom: 8px;
-}
-.purpose-card p {
-  font-size: 13px;
-  line-height: 1.8;
-  color: var(--text, rgba(255,255,255,0.65));
-  margin: 0;
-}
-
-/* Rights Grid */
-.rights-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 16px;
-  margin-top: 20px;
-}
-.right-item {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  background: rgba(184,135,59,0.04);
-  border: 1px solid rgba(184,135,59,0.1);
-  border-radius: var(--radius-card);
-  padding: 18px;
-}
-.right-icon {
-  font-size: 22px;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-.right-item strong {
-  display: block;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 6px;
-}
-.right-item p {
-  font-size: 13px;
-  color: var(--text, rgba(255,255,255,0.6));
-  line-height: 1.7;
-  margin: 0;
-}
-
-/* General items */
-.general-item {
-  margin-bottom: 20px;
-}
-.general-item h3 {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--gold);
-  margin-bottom: 8px;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
-  .policy-card {
-    padding: 28px 20px;
-  }
-  .policy-purpose-grid,
-  .rights-grid {
-    grid-template-columns: 1fr;
-  }
+  .policy-card { padding: 28px 20px; }
 }

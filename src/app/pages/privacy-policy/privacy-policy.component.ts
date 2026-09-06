@@ -21,6 +21,8 @@ export class PrivacyPolicyComponent implements OnInit {
   readonly languageService = inject(LanguageService);
 
   siteName = computed(() => this.contentService.siteSettings()['site-name'] || this.transloco.translate('common.defaultCompanyName'));
+  contactEmail = computed(() => this.contentService.siteSettings()['contact-email'] || '');
+  contactPhone = computed(() => this.contentService.siteSettings()['contact-phone'] || '');
 
   ngOnInit() {
     this.seoService.setPage({

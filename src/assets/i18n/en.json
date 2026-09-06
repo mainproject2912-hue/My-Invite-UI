@@ -513,120 +513,70 @@
   },
   "privacyPolicy": {
     "title": "Privacy Policy",
-    "updateDate": "Last updated: April 12, 2026",
-    "intro": {
-      "title": "Introduction",
-      "p1": "{{siteName}} is committed to protecting the privacy of the users of its platforms and applications, which include the systems, websites, applications, and all channels, services, and products affiliated with it.",
-      "p2": "{{siteName}} is committed to collecting and processing personal data in accordance with the provisions of the Saudi Personal Data Protection Law and its implementing regulations issued by the Saudi Data and Artificial Intelligence Authority (SDAIA), and in a manner consistent with best local and international practices in the field of privacy protection.",
-      "p3": "This policy aims to clarify how personal data is collected and processed, state the legitimate purposes of that processing, and set out data subjects' rights and the means of exercising them, in addition to the security and organizational measures adopted by {{siteName}} to protect data from any unauthorized access, use, or disclosure."
+    "updateDate": "Last updated: September 6, 2026",
+    "intro": "At {{siteName}}, we respect your privacy and are committed to handling your personal data responsibly and transparently. This policy briefly explains how we collect, use, and safeguard your data.",
+    "section1": {
+      "title": "1. Data We Collect",
+      "intro": "We may collect the data necessary to provide our services, such as:",
+      "item1": "Name.",
+      "item2": "Mobile number and contact details.",
+      "item3": "Email address when needed.",
+      "item4": "Event details.",
+      "item5": "Guest data entered by the user to use the invitation and attendance-management services.",
+      "item6": "Some technical data needed to operate the platform and improve your experience.",
+      "note": "We are careful to collect only the data necessary, and only to the extent related to its intended purpose."
     },
-    "scope": {
-      "title": "Scope of Application",
-      "p1": "This policy applies to all personal data that {{siteName}} collects or processes from the users of its platforms and applications, whether they are natural or legal persons, inside or outside the Kingdom of Saudi Arabia, through any of the following means or channels:",
-      "item1": "The platform's official websites.",
-      "item2": "The platform's smartphone applications.",
-      "item3": "The platform's affiliated online stores.",
-      "item4": "The platform's electronic systems.",
-      "item5": "Official communication channels, including, without limitation, WhatsApp messages and text messages.",
-      "item6": "Any other means or platform that {{siteName}} may adopt in the future to provide its services or products."
+    "section2": {
+      "title": "2. Use of Data",
+      "intro": "We use data for purposes related to {{siteName}}'s services, including:",
+      "item1": "Creating and managing digital invitations.",
+      "item2": "Sending invitations and tracking RSVP confirmations.",
+      "item3": "Managing guest lists.",
+      "item4": "Providing reports and features related to the event.",
+      "item5": "Communicating with you about your requests and our services.",
+      "item6": "Improving and developing the platform.",
+      "item7": "Complying with regulatory requirements when needed."
     },
-    "definitions": {
-      "title": "Definitions",
-      "p1": "For the purposes of this policy, the terms and phrases below shall have the meanings specified opposite each of them:",
-      "term1": "Personal Data:",
-      "def1": "Any information relating to a natural or legal person that identifies or could identify them, including, for example, name, ID number, commercial registration number, mobile number, email address, or any other data that can be used to identify the person or entity concerned.",
-      "term2": "Processing:",
-      "def2": "Any operation performed on personal data, whether automated or manual, including, without limitation, collection, recording, organization, storage, use, disclosure, modification, transmission, retrieval, transfer, or destruction.",
-      "term3": "Data Controller:",
-      "def3": "{{siteName}}, as the entity that determines the purposes and means of processing personal data and bears legal responsibility for that data.",
-      "term4": "Data Subject:",
-      "def4": "The natural or legal person to whom the personal data processed by {{siteName}} relates.",
-      "term5": "Sensitive Data:",
-      "def5": "Personal data whose disclosure, processing, or circulation entails high risk to the data subject, including, for example, financial data, biometric data, and identity-verification means."
+    "section3": {
+      "title": "3. Guest Data",
+      "p1": "When using our guest-management services, data specific to your event's guests may be added.",
+      "p2": "This data is used to provide services related to the invitation and attendance management, and only within the scope of the purpose for which it was collected.",
+      "p3": "The user is responsible for ensuring they have the right to enter and use guest data in accordance with the relevant regulatory requirements."
     },
-    "purpose": {
-      "title": "Purpose and Legal Grounds for Collecting Personal Data",
-      "p1": "{{siteName}} collects and processes users' personal data when using the platforms or applications in order to achieve the following purposes:",
-      "card1Title": "Providing Services and Products",
-      "card1Body": "Data is used to activate accounts, carry out registration and payment processes, and enable users to manage and organize occasions and events and obtain products and services.",
-      "card2Title": "Improving the User Experience",
-      "card2Body": "Data is used to analyze performance and usage in order to improve the services and products provided, develop new features, and ensure the stability and security of the platforms or applications.",
-      "card3Title": "Communication and Technical Support",
-      "card3Body": "Contact data is used to communicate with users regarding their requests or inquiries, or to provide them with technical and technological assistance.",
-      "card4Title": "Sending Notifications and Updates",
-      "card4Body": "{{siteName}} sends notifications or alerts to users related to the use of services or products, or updates to the relevant terms or policies.",
-      "card5Title": "Compliance with Laws and Instructions",
-      "card5Body": "Data may be processed to fulfill regulatory requirements or to meet any legal or organizational obligations issued by the competent authorities in the Kingdom of Saudi Arabia.",
-      "card6Title": "Protection and Ensuring Service Safety",
-      "card6Body": "Data is used to maintain the security of the platforms or applications and to protect accounts from unlawful use or unauthorized access."
+    "section4": {
+      "title": "4. Data Sharing",
+      "p1": "We do not sell personal data or use it for marketing purposes unrelated to our services.",
+      "p2": "Some data may be processed through supporting service providers when needed to operate the platform's functions, only to the extent necessary to provide the service and in accordance with the relevant regulatory requirements."
     },
-    "dataTypes": {
-      "title": "Types of Personal Data Collected by {{siteName}}",
-      "term1": "Personal Data and Contact Details:",
-      "def1": "Includes full name, mobile number, email address, and other contact details.",
-      "term2": "Occasion and Event Data:",
-      "def2": "Includes details of occasions or events, the names of invitees and their contact details, RSVP responses, notes, and the date, time, and locations of occasions and events.",
-      "term3": "Technical Data and Usage Data:",
-      "def3": "Includes IP address, device type, device number and specifications, operating system, and login data for the platforms and applications and activity logs.",
-      "term4": "Payment and Transaction Data:",
-      "def4": "Includes transaction number, payment amount and date, financial service provider and payment channel data, with confirmation that the Company does not retain or store bank or credit card information.",
-      "term5": "Communication and Technical Support Data:",
-      "def5": "Includes messages, conversations, support requests, and text, audio, or video attachments submitted by the user.",
-      "term6": "Third-Party Data Provided by the User:",
-      "def6": "If the user enters data relating to other parties, the processing of this data is carried out based on the user's consent and request, and the user is responsible for obtaining the consent of those parties before providing {{siteName}} with their data."
+    "section5": {
+      "title": "5. Data Retention",
+      "p1": "We retain data for the period necessary to achieve the purpose for which it was collected, or for the period required by regulatory obligations.",
+      "p2": "Once data is no longer needed, it is handled in accordance with approved deletion or destruction procedures, taking into account any regulatory retention requirements."
     },
-    "sharing": {
-      "title": "Sharing Data with External Parties",
-      "p1": "{{siteName}} is committed to maintaining the confidentiality of personal data and does not share it with any external party except in the cases specified below:",
-      "term1": "Approved Service Providers:",
-      "def1": "Some data is shared with approved service providers to facilitate the provision of certain services or products, under agreements that ensure compliance with confidentiality and data protection.",
-      "term2": "Competent Official Authorities:",
-      "def2": "Data is shared when there is a legal obligation or an official request issued by a competent governmental or judicial authority.",
-      "term3": "Venues, Hotels, and Operators:",
-      "def3": "Some data related to arranging events and occasions is shared with the relevant parties to the extent necessary to provide the requested services."
+    "section6": {
+      "title": "6. Data Protection",
+      "p1": "We take appropriate technical and organizational measures to help protect personal data from unauthorized access or use, in line with the nature of the data and services provided."
     },
-    "protection": {
-      "title": "Protection of Personal Data",
-      "p1": "{{siteName}} is committed to protecting personal data in accordance with the provisions of the Saudi Personal Data Protection Law and its implementing regulation, by taking the necessary measures to ensure:",
-      "item1": "The confidentiality of personal data and its protection from any unauthorized access, use, or disclosure.",
-      "item2": "The integrity of personal data and prevention of its unlawful modification.",
-      "item3": "Restricting access to personal data so that it is limited to employees and authorized parties within the scope of the need and responsibility established.",
-      "item4": "Using personal data in a manner consistent with the authorized purpose and safeguarding the rights of individuals and entities in accordance with the adopted policy and the law in force in the Kingdom of Saudi Arabia."
+    "section7": {
+      "title": "7. Your Rights",
+      "intro": "In accordance with the relevant laws and regulations, you may have a number of rights regarding your personal data, including the right to request:",
+      "item1": "Knowing how your data is used.",
+      "item2": "Accessing your personal data.",
+      "item3": "Correcting or updating your data.",
+      "item4": "Deleting your data in the cases permitted by law.",
+      "item5": "Withdrawing consent, where consent is the legal basis for processing.",
+      "note": "You can contact us to exercise your rights or to inquire about how your data is handled."
     },
-    "rights": {
-      "title": "Data Subject Rights",
-      "p1": "{{siteName}} guarantees the data subject the exercise of the legal rights set out in the Saudi Personal Data Protection Law, including the following:",
-      "right1Icon": "👁",
-      "right1Title": "Access",
-      "right1Body": "Knowing the personal data collected by the platform, its categories, and the purposes associated with its processing.",
-      "right2Icon": "✏️",
-      "right2Title": "Correction",
-      "right2Body": "Requesting the modification or correction of any inaccurate or incomplete personal data.",
-      "right3Icon": "🗑",
-      "right3Title": "Deletion",
-      "right3Body": "Requesting the removal or destruction of their personal data once the purpose of its collection has expired.",
-      "right4Icon": "↩️",
-      "right4Title": "Withdrawal of Consent",
-      "right4Body": "Withdrawing any previously given consent to the processing of personal data.",
-      "right5Icon": "🚫",
-      "right5Title": "Restriction of or Objection to Processing",
-      "right5Body": "Objecting to or restricting the processing of personal data where a legal justification is available.",
-      "right6Icon": "📦",
-      "right6Title": "Personal Data Portability",
-      "right6Body": "Requesting a copy of personal data in a readable format."
+    "section8": {
+      "title": "8. Updates to This Privacy Policy",
+      "p1": "We may update this policy from time to time to keep up with any changes in our services or regulatory requirements.",
+      "p2": "The updated version will be published on this page, with the last-updated date indicated."
     },
-    "retention": {
-      "title": "Data Retention Period",
-      "p1": "{{siteName}} retains personal data to achieve the purposes for which it was collected, or as required by the relevant laws and regulations. Data retention continues for as long as it is required to fulfill legal or regulatory obligations, or to protect rights and claims related to the platform or the parties concerned. Users may request the deletion of their personal data, and the request will be carried out in accordance with the adopted procedures and in a manner that does not conflict with any existing legal obligations."
-    },
-    "general": {
-      "title": "General Provisions",
-      "item1Title": "Agreement to the Policy",
-      "item1Body": "By using the {{siteName}} platform, you expressly agree to this privacy policy, including any subsequent amendments made to it. If you do not agree to any of the provisions of this policy, you must stop using the platform immediately.",
-      "item2Title": "Amendments to the Policy",
-      "item2Body": "{{siteName}} reserves the right to amend the privacy policy in a manner consistent with the laws and regulations in force in the Kingdom of Saudi Arabia. Your continued use of the platform after any amendments are announced constitutes your explicit acceptance of those changes.",
-      "item3Title": "Jurisdiction",
-      "item3Body": "This policy and any disputes arising from its use or interpretation are subject to the laws and regulations of the Kingdom of Saudi Arabia, and jurisdiction shall lie exclusively with the competent courts of the Kingdom of Saudi Arabia."
+    "section9": {
+      "title": "9. Contact Us",
+      "intro": "For any inquiry related to privacy or your personal data, you can contact us via:",
+      "emailLabel": "Email:",
+      "phoneLabel": "Phone:"
     }
   },
   "terms": {
