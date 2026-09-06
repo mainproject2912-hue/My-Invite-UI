@@ -18,90 +18,45 @@
   <div class="container mx-auto px-5 py-14 lg:py-20">
     <div class="policy-card">
 
-      <!-- Two-column policy cards -->
-      <div class="policy-columns">
+      <section class="policy-section">
+        <h2>{{ 'cancellationPolicy.clause1.label' | transloco }}</h2>
+        <p>{{ 'cancellationPolicy.clause1.body' | transloco }}</p>
+      </section>
 
-        <!-- Cancellation Column -->
-        <div class="policy-column">
-          <div class="column-header cancellation-header">
-            <h2>{{ 'cancellationPolicy.cancellation.title' | transloco }}</h2>
-          </div>
-          <p class="column-intro">{{ 'cancellationPolicy.cancellation.intro' | transloco }}</p>
+      <section class="policy-section">
+        <h2>{{ 'cancellationPolicy.clause2.label' | transloco }}</h2>
+        <p>{{ 'cancellationPolicy.clause2.body' | transloco }}</p>
+      </section>
 
-          <div class="policy-timeline">
+      <section class="policy-section">
+        <h2>{{ 'cancellationPolicy.clause3.label' | transloco }}</h2>
+        <p>{{ 'cancellationPolicy.clause3.body' | transloco }}</p>
+      </section>
 
-            <div class="timeline-item">
-              <div class="timeline-badge">{{ 'cancellationPolicy.cancellation.beforeBadge' | transloco }}</div>
-              <h3>{{ 'cancellationPolicy.cancellation.beforeHeading' | transloco }}</h3>
-              <ul>
-                <li [innerHTML]="'cancellationPolicy.cancellation.beforeItem1' | transloco"></li>
-                <li [innerHTML]="'cancellationPolicy.cancellation.beforeItem2' | transloco"></li>
-              </ul>
-            </div>
+      <section class="policy-section">
+        <h2>{{ 'cancellationPolicy.clause4.label' | transloco }}</h2>
+        <p>{{ 'cancellationPolicy.clause4.body' | transloco }}</p>
+      </section>
 
-            <div class="timeline-item">
-              <div class="timeline-badge">{{ 'cancellationPolicy.cancellation.afterBadge' | transloco }}</div>
-              <h3>{{ 'cancellationPolicy.cancellation.afterHeading' | transloco }}</h3>
-              <ul>
-                <li [innerHTML]="'cancellationPolicy.cancellation.afterItem1' | transloco"></li>
-                <li [innerHTML]="'cancellationPolicy.cancellation.afterItem2' | transloco"></li>
-              </ul>
-            </div>
+      <section class="policy-section">
+        <h2>{{ 'cancellationPolicy.clause5.label' | transloco }}</h2>
+        <p>{{ 'cancellationPolicy.clause5.body' | transloco }}</p>
+      </section>
 
-            <div class="timeline-item timeline-item--warning">
-              <div class="timeline-badge timeline-badge--warning">{{ 'cancellationPolicy.cancellation.weekBadge' | transloco }}</div>
-              <h3>{{ 'cancellationPolicy.cancellation.weekHeading' | transloco }}</h3>
-              <ul>
-                <li>{{ 'cancellationPolicy.cancellation.weekItem1' | transloco }}</li>
-              </ul>
-            </div>
+      <section class="policy-section">
+        <h2>{{ 'cancellationPolicy.clause6.label' | transloco }}</h2>
+        <p>{{ 'cancellationPolicy.clause6.body' | transloco }}</p>
+      </section>
 
-          </div>
-        </div>
+      <section class="policy-section">
+        <h2>{{ 'cancellationPolicy.clause7.label' | transloco }}</h2>
+        <p>{{ 'cancellationPolicy.clause7.body' | transloco }}</p>
+      </section>
 
-        <!-- Rescheduling Column -->
-        <div class="policy-column">
-          <div class="column-header rescheduling-header">
-            <h2>{{ 'cancellationPolicy.rescheduling.title' | transloco }}</h2>
-          </div>
-          <p class="column-intro">{{ 'cancellationPolicy.rescheduling.intro' | transloco }}</p>
-
-          <div class="policy-timeline">
-
-            <div class="timeline-item">
-              <div class="timeline-badge">{{ 'cancellationPolicy.rescheduling.beforeBadge' | transloco }}</div>
-              <h3>{{ 'cancellationPolicy.rescheduling.beforeHeading' | transloco }}</h3>
-              <ul>
-                <li>{{ 'cancellationPolicy.rescheduling.beforeItem1' | transloco }}</li>
-              </ul>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-badge">{{ 'cancellationPolicy.rescheduling.afterBadge' | transloco }}</div>
-              <h3>{{ 'cancellationPolicy.rescheduling.afterHeading' | transloco }}</h3>
-              <ul>
-                <li [innerHTML]="'cancellationPolicy.rescheduling.afterItem1' | transloco"></li>
-              </ul>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-badge">{{ 'cancellationPolicy.rescheduling.weekBadge' | transloco }}</div>
-              <h3>{{ 'cancellationPolicy.rescheduling.weekHeading' | transloco }}</h3>
-              <ul>
-                <li [innerHTML]="'cancellationPolicy.rescheduling.weekItem1' | transloco"></li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Note -->
-      <div class="policy-note">
-        <span class="note-label">{{ 'cancellationPolicy.note.label' | transloco }}</span>
-        <p>- {{ 'cancellationPolicy.note.body' | transloco }}</p>
-      </div>
+      <section class="policy-section">
+        <h2>{{ 'cancellationPolicy.clause8.label' | transloco }}</h2>
+        <p>{{ 'cancellationPolicy.clause8.body' | transloco: { siteName: siteName() } }}</p>
+      </section>
 
     </div>
   </div>

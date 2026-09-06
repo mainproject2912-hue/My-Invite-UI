@@ -1,8 +1,9 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, computed, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { TranslocoModule } from '@jsverse/transloco';
+import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
 import { NavbarComponent } from '../../components/navbar/navbar';
 import { FooterComponent } from '../../components/footer/footer';
+import { ContentService } from '../../services/content.service';
 import { SeoService } from '../../services/seo.service';
 import { LanguageService } from '../../i18n/language.service';
 
@@ -14,8 +15,12 @@ import { LanguageService } from '../../i18n/language.service';
   styleUrl: './cancellation-policy.component.css'
 })
 export class CancellationPolicyComponent implements OnInit {
+  private contentService = inject(ContentService);
   private seoService = inject(SeoService);
+  private transloco = inject(TranslocoService);
   readonly languageService = inject(LanguageService);
+
+  siteName = computed(() => this.contentService.siteSettings()['site-name'] || this.transloco.translate('common.defaultCompanyName'));
 
   ngOnInit() {
     this.seoService.setPage({

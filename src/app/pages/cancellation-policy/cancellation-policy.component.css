@@ -31,7 +31,7 @@
 .policy-breadcrumb a:hover { opacity: 0.75; }
 
 .policy-card {
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
   background: var(--bg-card);
   border: 1px solid rgba(184,135,59,0.1);
@@ -39,152 +39,32 @@
   padding: 48px 56px;
 }
 
-/* Two-column layout */
-.policy-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  margin-bottom: 40px;
-}
-
-.policy-column {
-  border: 1px solid rgba(184,135,59,0.1);
-  border-radius: var(--radius-card);
-  overflow: hidden;
-}
-
-.column-header {
-  padding: 20px 24px;
-  text-align: center;
-}
-.column-header h2 {
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: #fff;
-  margin: 0;
-}
-.cancellation-header {
-  background: linear-gradient(135deg, rgba(220, 80, 80, 0.85), rgba(180, 40, 40, 0.9));
-}
-.rescheduling-header {
-  /* Was a raw yellow gradient (255,215,0 / 200,160,0), unrelated to the
-     brand gold — now uses the same signature gradient as every primary
-     CTA sitewide. */
-  background: var(--gold-gradient);
-}
-.rescheduling-header h2 {
-  /* Matches the sitewide text-on-gold convention (#0B1320), was a
-     one-off near-black (#1a1200). */
-  color: #0B1320;
-}
-
-.column-intro {
-  font-size: 13px;
-  color: var(--text, rgba(255,255,255,0.7));
-  line-height: 1.8;
-  padding: 16px 20px 12px;
+/* Sections */
+.policy-section {
+  margin-bottom: 36px;
+  padding-bottom: 36px;
   border-bottom: 1px solid var(--border-subtle);
-  margin: 0;
 }
-
-/* Timeline inside columns */
-.policy-timeline {
-  padding: 16px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.policy-section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
 }
-
-.timeline-item {
-  background: var(--bg-surface);
-  border: 1px solid rgba(184,135,59,0.08);
-  border-radius: var(--radius-card);
-  padding: 16px;
-}
-.timeline-item--warning {
-  border-color: rgba(220, 80, 80, 0.2);
-  background: rgba(220, 80, 80, 0.04);
-}
-
-.timeline-badge {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 700;
-  padding: 3px 12px;
-  border-radius: 50px;
-  background: rgba(184,135,59,0.12);
+.policy-section h2 {
+  font-size: 1.15rem;
+  font-weight: 800;
   color: var(--gold);
-  margin-bottom: 10px;
-}
-.timeline-badge--warning {
-  background: rgba(220, 80, 80, 0.15);
-  color: #f87171;
-}
-
-.timeline-item h3 {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--text);
-  line-height: 1.6;
-  margin-bottom: 10px;
-}
-
-.timeline-item ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.timeline-item ul li {
-  font-size: 13px;
-  color: var(--text, rgba(255,255,255,0.7));
-  line-height: 1.7;
+  margin-bottom: 14px;
   padding-inline-start: 14px;
-  position: relative;
+  border-inline-start: 3px solid var(--gold);
 }
-.timeline-item ul li::before {
-  content: '';
-  position: absolute;
-  inset-inline-start: 0;
-  top: 8px;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--gold);
-}
-.timeline-item ul li strong {
-  color: var(--gold);
-  font-size: 14px;
-}
-
-/* Note */
-.policy-note {
-  border-top: 1px solid rgba(184,135,59,0.1);
-  padding-top: 24px;
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-}
-.note-label {
-  flex-shrink: 0;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 3px 14px;
-  border-radius: 50px;
-  background: rgba(184,135,59,0.1);
-  color: var(--gold);
-  border: 1px solid rgba(184,135,59,0.25);
-}
-.policy-note p {
-  font-size: 13px;
-  color: var(--text, rgba(255,255,255,0.6));
-  line-height: 1.8;
+.policy-section p {
+  color: var(--text, rgba(255,255,255,0.75));
+  line-height: 2;
+  font-size: 15px;
   margin: 0;
 }
 
 @media (max-width: 768px) {
-  .policy-card { padding: 28px 16px; }
-  .policy-columns { grid-template-columns: 1fr; }
+  .policy-card { padding: 28px 20px; }
 }

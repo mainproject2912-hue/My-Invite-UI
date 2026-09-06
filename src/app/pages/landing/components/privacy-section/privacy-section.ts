@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslocoModule } from '@jsverse/transloco';
+import { LanguageService } from '../../../../i18n/language.service';
 
 @Component({
   selector: 'app-privacy-section',
@@ -9,4 +10,6 @@ import { TranslocoModule } from '@jsverse/transloco';
   templateUrl: './privacy-section.html',
   styleUrl: './privacy-section.css'
 })
-export class PrivacySectionComponent {}
+export class PrivacySectionComponent {
+  readonly languageService = inject(LanguageService);
+}

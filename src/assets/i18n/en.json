@@ -334,7 +334,6 @@
     "heading": "Try your invitation before deciding",
     "infoTitle": "Try your invitation in your name with the same quality before ordering",
     "infoBody": "A free demo invitation will reach you on WhatsApp within a minute, and if you like it, you can easily complete your order",
-    "infoCta": "You will receive a demo message on WhatsApp within a minute, and you can order the final design afterwards",
     "nameLabel": "Name (Optional)",
     "namePlaceholder": "e.g., John Smith",
     "phoneLabel": "WhatsApp Number",
@@ -734,38 +733,38 @@
     }
   },
   "cancellationPolicy": {
-    "title": "Cancellation & Rescheduling Policy",
-    "cancellation": {
-      "title": "Cancellation Policy",
-      "intro": "If the client wishes to cancel the occasion or service, the refund of amounts depends on the following cases:",
-      "beforeBadge": "Before Starting",
-      "beforeHeading": "Before invitations begin being sent, or before the service begins being used",
-      "beforeItem1": "The Company is entitled to deduct <strong>10%</strong> of the total invoice value, in addition to deducting all services that were not provided to the client.",
-      "beforeItem2": "The amount due — after deductions — will be refunded within a maximum period of <strong>7 days</strong>.",
-      "afterBadge": "After Starting",
-      "afterHeading": "After invitations begin being sent, or after the service begins being used",
-      "afterItem1": "The Company is entitled to deduct <strong>50%</strong> of the total invoice value.",
-      "afterItem2": "The amount due — after deductions — will be refunded within a maximum period of <strong>7 days</strong>.",
-      "weekBadge": "One Week Before the Date",
-      "weekHeading": "One week before the occasion's date, or after the service has been used",
-      "weekItem1": "The client is not entitled to a refund of any amounts paid, and all obligations are considered to remain in effect."
+    "title": "Booking & Cancellation Policy",
+    "clause1": {
+      "label": "First",
+      "body": "If the agreed deposit has been paid and the client then cancels the booking definitively before the scheduled event date, please note that the paid deposit is non-refundable, whether the deposit was paid by bank transfer or through the store."
     },
-    "rescheduling": {
-      "title": "Rescheduling Policy",
-      "intro": "If the client wishes to reschedule the occasion or service, the rescheduling process is subject to the following cases:",
-      "beforeBadge": "Before Starting",
-      "beforeHeading": "Before invitations begin being sent, or before the service begins being used",
-      "beforeItem1": "The client is allowed to reschedule once only, with no additional fees.",
-      "afterBadge": "After Starting",
-      "afterHeading": "After invitations begin being sent, or after the service begins being used",
-      "afterItem1": "The client is allowed to reschedule once only, for an additional fee of <strong>30%</strong> of the total invoice value.",
-      "weekBadge": "One Week Before the Date",
-      "weekHeading": "One week before the occasion's date, or after the service has been used",
-      "weekItem1": "The client is allowed to reschedule once only, for an additional fee of <strong>50%</strong> of the total invoice value."
+    "clause2": {
+      "label": "Second",
+      "body": "If the client makes changes to an entry card — whether to the guest's name, the QR code, or otherwise — the card will be permanently disabled in the system, and we disclaim any responsibility arising from that."
     },
-    "note": {
-      "label": "Note",
-      "body": "This policy applies to all packages of the invitation management service, electronic services, and additional services of all kinds."
+    "clause3": {
+      "label": "Third",
+      "body": "If official orders are issued by the competent authorities to cancel or postpone events and celebrations due to epidemics, viruses, natural disasters, or similar circumstances, the client is entitled — if they wish to postpone the event to another date — to have the event's day and date changed free of charge, provided the venue location is not changed."
+    },
+    "clause4": {
+      "label": "Fourth",
+      "body": "If the cards have already been issued by the system and the client wishes to postpone the event, change the event venue, change the invitation design, or add an edit to the invitation card, new invitations will be issued according to the client's request for a separate additional amount, without refunding the amount for the previous invitations — since the previous invitations already had their codes (QR feature) issued by the system."
+    },
+    "clause5": {
+      "label": "Fifth",
+      "body": "If the barcodes for the client's guests have already been issued and the client then cancels the event definitively for any reason, the client is obligated to pay the remaining balance of the full invoice."
+    },
+    "clause6": {
+      "label": "Sixth",
+      "body": "The invoice will be issued by the finance department three days before the event, and the client is required to settle the remaining amount as soon as the invoice is issued; after that, no further guests may be added for the client."
+    },
+    "clause7": {
+      "label": "Seventh",
+      "body": "The assignment of male and female supervisors to events and occasions is determined by the supervisors department, not according to the client's preference."
+    },
+    "clause8": {
+      "label": "Eighth",
+      "body": "After the event has concluded, {{siteName}} is entitled to publish the client's design on Instagram, the store, and other social media platforms."
     }
   },
   "seo": {
