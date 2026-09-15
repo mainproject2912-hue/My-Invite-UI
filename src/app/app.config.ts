@@ -15,7 +15,7 @@ import {
   LucideAngularModule,
   Heart, GraduationCap, Briefcase, Landmark, Users, User, Check,
   Star, ArrowRight, ArrowLeft, Play, Calendar, Clock, MapPin, Mail, Phone, MessageSquare,
-  Send, Menu, X, ChevronDown, ChevronUp, ChevronRight, ChevronLeft,
+  Send, Menu, X, ChevronDown, ChevronUp, ChevronRight, ChevronLeft, Plus, Minus,
   Instagram, Twitter, Facebook, Linkedin, Youtube,
   ShoppingBag, Search,
   Sparkles, Moon, Sun, Eye, Crown, Zap, Palette, Smartphone, Puzzle,
@@ -53,7 +53,7 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom(LucideAngularModule.pick({
       Heart, GraduationCap, Briefcase, Landmark, Users, User, Check,
       Star, ArrowRight, ArrowLeft, Play, Calendar, Clock, MapPin, Mail, Phone, MessageSquare,
-      Send, Menu, X, ChevronDown, ChevronUp, ChevronRight, ChevronLeft,
+      Send, Menu, X, ChevronDown, ChevronUp, ChevronRight, ChevronLeft, Plus, Minus,
       Instagram, Twitter, Facebook, Linkedin,
       ShoppingBag, Search,
       Sparkles, Moon, Sun, Eye, Crown, Zap, Palette, Smartphone, Puzzle,

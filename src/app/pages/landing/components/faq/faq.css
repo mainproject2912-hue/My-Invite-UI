@@ -1,10 +1,10 @@
 .faq-section {
   background-color: #0b0f19;
-  padding: 100px 0;
+  padding: 64px 0;
 }
 
 .faq-inner {
-  max-width: 860px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -15,7 +15,7 @@
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 }
 
 .faq-header .section-title {
@@ -27,10 +27,11 @@
   color: #cbd5e1 !important;
 }
 
-.faq-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
 }
 
 .faq-item {
@@ -52,38 +53,88 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 20px 24px;
+  padding: 20px 22px;
   background: none;
   border: none;
   cursor: pointer;
   text-align: start;
   font-family: inherit;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   color: #ffffff;
 }
 
-.faq-chevron {
-  width: 20px;
-  height: 20px;
-  color: #d4af37;
+.faq-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
-  transition: transform 0.25s ease;
+  background: rgba(212, 175, 55, 0.15);
+  color: #d4af37;
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
-.faq-item.open .faq-chevron {
-  transform: rotate(180deg);
+.faq-icon lucide-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  line-height: 0;
+}
+
+.faq-icon lucide-icon ::ng-deep svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.faq-item.open .faq-icon {
+  background: #d4af37;
+  color: #0b0f19;
 }
 
 .faq-answer {
-  padding: 0 24px 22px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0 22px 20px;
 }
 
 .faq-answer p {
-  margin: 12px 0 0;
+  margin: 0;
   color: #cbd5e1;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.8;
   font-weight: 400;
+}
+
+.faq-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.faq-more-btn {
+  padding: 12px 32px;
+  border-radius: 999px;
+  border: 1px solid #d4af37;
+  background: transparent;
+  color: #d4af37;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.faq-more-btn:hover {
+  background: #d4af37;
+  color: #0b0f19;
+}
+
+@media (max-width: 768px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
 }

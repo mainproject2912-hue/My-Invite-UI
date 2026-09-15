@@ -918,10 +918,9 @@ body {
    SECTION SPACING
    =================================================== */
 .section-py {
-  /* Was 96px — the reference runs its section rhythm at 100-130px;
-     112px sits centrally in that range. */
-  padding-top: 112px;
-  padding-bottom: 112px;
+  /* Tightened from 112px — client feedback: gaps between sections too large. */
+  padding-top: 72px;
+  padding-bottom: 72px;
 }
 
 .section-py-sm {
@@ -931,8 +930,8 @@ body {
 
 @media (max-width: 1024px) {
   .section-py {
-    padding-top: 72px;
-    padding-bottom: 72px;
+    padding-top: 56px;
+    padding-bottom: 56px;
   }
 
   .section-py-sm {
@@ -943,12 +942,8 @@ body {
 
 @media (max-width: 640px) {
   .section-py {
-    padding-top: 48px;
-    padding-bottom: 48px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .section-py-sm {

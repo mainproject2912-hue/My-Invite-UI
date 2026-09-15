@@ -6,8 +6,8 @@
       <p class="section-sub">{{ 'faq.subtitle' | transloco }}</p>
     </div>
 
-    <div class="faq-list">
-      @for (i of indices; track i) {
+    <div class="faq-grid">
+      @for (i of visibleIndices(); track i) {
         <div class="faq-item" [class.open]="isOpen(i)">
           <button
             type="button"
@@ -16,7 +16,9 @@
             [attr.aria-expanded]="isOpen(i)"
           >
             <span>{{ 'faq.q' + i + '.q' | transloco }}</span>
-            <lucide-icon name="chevron-down" class="faq-chevron"></lucide-icon>
+            <span class="faq-icon" aria-hidden="true">
+              <lucide-icon [name]="isOpen(i) ? 'minus' : 'plus'"></lucide-icon>
+            </span>
           </button>
           @if (isOpen(i)) {
             <div class="faq-answer">
@@ -26,5 +28,13 @@
         </div>
       }
     </div>
+
+    @if (indices.length > initialCount) {
+      <div class="faq-more">
+        <button type="button" class="faq-more-btn" (click)="toggleShowAll()">
+          {{ (showAll() ? 'faq.showLess' : 'faq.showAll') | transloco }}
+        </button>
+      </div>
+    }
   </div>
 </section>

@@ -410,6 +410,8 @@
   },
   "faq": {
     "kicker": "FAQ",
+    "showAll": "View all questions",
+    "showLess": "Show less",
     "title": "Got a question? We've got the answer",
     "subtitle": "The most common questions we get from our clients about Special Cards",
     "q0": { "q": "What is Special Cards?", "a": "Special Cards is a platform specialized in designing and sending distinctive digital invitations for weddings and occasions. It helps you create invitations easily, send them via WhatsApp and text messages, track attendance statistics, and send automatic reminders." },
