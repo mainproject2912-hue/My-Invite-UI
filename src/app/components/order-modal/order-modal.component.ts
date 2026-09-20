@@ -9,6 +9,7 @@ import { TranslocoService, TranslocoModule } from '@jsverse/transloco';
 import { DesignOrderService } from '../../services/design-order.service';
 import { environment } from '../../../environments/environment';
 import { CountriesService, DisplayCountry } from '../../shared/countries.service';
+import { MetaTrackingService } from '../../services/meta-tracking.service';
 
 @Component({
   selector: 'app-order-modal',
@@ -24,6 +25,7 @@ export class OrderModalComponent implements OnInit {
   private readonly http = inject(HttpClient);
   private readonly countriesService = inject(CountriesService);
   private readonly transloco = inject(TranslocoService);
+  private readonly metaTracking = inject(MetaTrackingService);
 
   name = '';
   phone = '';
@@ -88,14 +90,21 @@ export class OrderModalComponent implements OnInit {
     this.submitting.set(true);
     this.submitError.set('');
 
+    // One id per submit attempt, shared with the backend CAPI call so Meta
+    // de-duplicates it against the Pixel event fired on success below.
+    const eventId = this.metaTracking.newEventId();
+
     this.http.post(`${environment.apiUrl}/Contacts`, {
       name: this.name,
       phoneNumber: `+${this.selectedCountry().dialCode}${this.phone}`,
       message: this.message,
-    }).subscribe({
+      eventId,
+    }, { headers: this.metaTracking.metaHeaders(eventId) }).subscribe({
       next: () => {
         this.submitting.set(false);
         this.submitSuccess.set(true);
+        // Only here — the message is now saved in the dashboard.
+        this.metaTracking.trackLead(eventId, { content_name: 'Contact Form' });
       },
       error: (err) => {
         this.submitting.set(false);

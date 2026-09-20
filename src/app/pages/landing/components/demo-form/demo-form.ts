@@ -6,6 +6,7 @@ import { DemoService } from '../../../../services/demo.service';
 import { CountriesService, DisplayCountry } from '../../../../shared/countries.service';
 import { ScrollService } from '../../../../services/scroll.service';
 import { ContentService } from '../../../../services/content.service';
+import { MetaTrackingService } from '../../../../services/meta-tracking.service';
 
 type Step = 'form' | 'otp' | 'success';
 
@@ -24,6 +25,7 @@ export class DemoFormComponent {
   private transloco = inject(TranslocoService);
   readonly scrollService = inject(ScrollService);
   private contentService = inject(ContentService);
+  private metaTracking = inject(MetaTrackingService);
 
   readonly eventTypes = this.contentService.eventTypes;
 
@@ -90,11 +92,18 @@ export class DemoFormComponent {
     }
 
     this.loading.set(true);
-    this.demoService.verifyOtp(this.whatsAppNumber, this.otp.trim())
+
+    // One id per verify attempt: the backend reuses it for the CAPI event, so
+    // Meta de-duplicates it against the Pixel event fired below.
+    const eventId = this.metaTracking.newEventId();
+
+    this.demoService.verifyOtp(this.whatsAppNumber, this.otp.trim(), eventId)
       .subscribe({
-        next: () => {
+        next: (res) => {
           this.loading.set(false);
           this.step.set('success');
+          // Only here — the demo request is now saved in the dashboard.
+          this.metaTracking.trackLead(res?.eventId || eventId, { content_name: 'Demo Request' });
         },
         error: (err) => {
           this.loading.set(false);
