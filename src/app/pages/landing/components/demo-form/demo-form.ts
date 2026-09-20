@@ -79,7 +79,7 @@ export class DemoFormComponent {
         },
         error: (err) => {
           this.loading.set(false);
-          this.errorMsg.set(err?.error?.message ?? this.transloco.translate('demoForm.errors.genericError'));
+          this.errorMsg.set(this.apiErrorMessage(err, 'demoForm.errors.genericError'));
         }
       });
   }
@@ -107,9 +107,23 @@ export class DemoFormComponent {
         },
         error: (err) => {
           this.loading.set(false);
-          this.errorMsg.set(err?.error?.message ?? this.transloco.translate('demoForm.errors.otpInvalid'));
+          this.errorMsg.set(this.apiErrorMessage(err, 'demoForm.errors.otpInvalid'));
         }
       });
+  }
+
+  /**
+   * Only 4xx bodies carry a message meant for the customer. A 500 (or a dead
+   * connection) returns the API's English "An unexpected error occurred.",
+   * which has no business showing up inside the Arabic form.
+   */
+  private apiErrorMessage(err: unknown, fallbackKey: string): string {
+    const status = (err as { status?: number })?.status ?? 0;
+    const message = (err as { error?: { message?: string } })?.error?.message;
+
+    return status >= 400 && status < 500 && message
+      ? message
+      : this.transloco.translate(fallbackKey);
   }
 
   resend() {
