@@ -48,3 +48,6 @@ Data_of_backend/backend_knowledge_base.txt
 Data_of_backend/apiLink.txt
 .env.local
 src/environments/env.config.ts
+
+# Local AI reference map
+PROJECTS_MAP.md
