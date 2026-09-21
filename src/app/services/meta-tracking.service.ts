@@ -57,6 +57,22 @@ export class MetaTrackingService {
   }
 
   /**
+   * Fires the browser-side PageView. In our SPA, this is invoked once per settled route
+   * navigation to prevent duplicate events on initial redirects (e.g. '/' -> '/:lang').
+   * If a server-side PageView CAPI event is also sent, pass the shared `eventId` so Meta
+   * deduplicates them.
+   */
+  trackPageView(eventId?: string): void {
+    if (!this.isBrowser || typeof window.fbq !== 'function') return;
+
+    if (eventId) {
+      window.fbq('track', 'PageView', {}, { eventID: eventId });
+    } else {
+      window.fbq('track', 'PageView');
+    }
+  }
+
+  /**
    * Fires the browser-side Lead. Call it only after the API returned success —
    * never on submit click, never in a finally/error branch.
    */
